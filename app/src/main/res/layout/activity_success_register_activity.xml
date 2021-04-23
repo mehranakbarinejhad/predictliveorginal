@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginprofile_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/logingradint"
+
+    tools:context=".SuccessRegisterActivityActivity">
+    <View
+        android:id="@+id/Viewlogo_successactivity"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/loginlogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C6CBD4"
+        android:text="@string/l"
+        android:layout_alignBottom="@+id/Viewlogo_successactivity"
+        android:fontFamily="@font/simsun"
+        android:layout_marginBottom="35sp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="90sp"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/live_predict"
+        android:textSize="22sp"
+        android:fontFamily="@font/andalus"
+        android:layout_marginTop="2dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:textColor="#C6CBD4"
+        android:layout_below="@id/Viewlogo_successactivity"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txt_successtext_successactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registration_completed_successfully"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/andalus"
+        android:layout_marginTop="50sp"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_success_successactivity"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/success"
+        android:layout_below="@id/txt_successtext_successactivity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+
+
+
+</RelativeLayout>
