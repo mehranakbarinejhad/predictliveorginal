@@ -1,4 +1,4 @@
-package ir.liyanamarket.predictlive
+package ir.liyanamarket.predictlive.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendSmsCodeinterface
 import ir.liyanamarket.predictlive.dataclass.SmsCode
 import ir.liyanamarket.predictlive.presenter.sendcode.PresenterApiConnectSendCode
@@ -30,7 +31,7 @@ class ValidateCodeActivity : AppCompatActivity(),SendSmsCodeinterface {
         btn_next_validateactivity.setOnClickListener {
             val enteringtext=textCode(edt_numberone_validateactivity,edt_numbertwo_validateactivity,edt_numberthree_validateactivity,edt_numberfor_validateactivity,edt_numberfive_validateactivity)
             if(enteringtext==smscode) {
-                val intent= Intent(this,RegisterActivity::class.java)
+                val intent= Intent(this, RegisterActivity::class.java)
                 intent.putExtra("phonenumber",phonenumber)
                 startActivity(intent)
                 finish()

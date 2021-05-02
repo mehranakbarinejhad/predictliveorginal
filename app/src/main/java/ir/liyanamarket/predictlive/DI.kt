@@ -2,8 +2,7 @@ package ir.liyanamarket.predictlive
 
 
 import com.squareup.picasso.Picasso
-import ir.liyanamarket.predictlive.adapter.PredictAdapter
-import ir.liyanamarket.predictlive.adapter.RankingAdapter
+import ir.liyanamarket.predictlive.adapter.*
 import ir.liyanamarket.predictlive.fragment.*
 import ir.liyanamarket.predictlive.model.changeprofile.ApiConnectToChangeProfile
 import ir.liyanamarket.predictlive.model.match.ApiConnectToSelectMatch
@@ -11,6 +10,8 @@ import ir.liyanamarket.predictlive.model.predict.ApiConnectSelectPredict
 import ir.liyanamarket.predictlive.model.predict.ApiConnectinsertPredict
 import ir.liyanamarket.predictlive.model.register.ApiConnectRegister
 import ir.liyanamarket.predictlive.model.sendcode.ApiConnectSendCode
+import ir.liyanamarket.predictlive.model.shop.group.ApiConnectGroup
+import ir.liyanamarket.predictlive.model.shop.kala.ApiConnectToSelectKala
 import ir.liyanamarket.predictlive.model.user.ApiConnectUsers
 import ir.liyanamarket.predictlive.model.validatephonenumber.ApiConnectValidatePhoneNumber
 import ir.liyanamarket.predictlive.presenter.changeprofile.PresenterApiconnectChangeProfile
@@ -19,6 +20,8 @@ import ir.liyanamarket.predictlive.presenter.predict.PresenterApiConnectSelectPr
 import ir.liyanamarket.predictlive.presenter.predict.PresenterApiConnectinsertPredict
 import ir.liyanamarket.predictlive.presenter.register.PresenterApiConnectRegister
 import ir.liyanamarket.predictlive.presenter.sendcode.PresenterApiConnectSendCode
+import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
+import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
 import ir.liyanamarket.predictlive.presenter.validatephonenumber.PresenterApiConnectValidatePhoneNumber
 import ir.liyanamarket.predictlive.utils.CheckValidateInputPhoneNumber
@@ -54,4 +57,11 @@ var appmadules= module {
     single { PresenterApiConnectSendCode() }
     single { ApiConnectRegister() }
     single { PresenterApiConnectRegister() }
+    single { ApiConnectToSelectKala() }
+    single { PresenterApiConnectSelectKala() }
+    single { GroupKalaAdapter() }
+    single { KalaAdapter(get()) }
+    single { ApiConnectGroup() }
+    single { PresenterApiConnectGroup() }
+    single { SpinerAdapter() }
 }

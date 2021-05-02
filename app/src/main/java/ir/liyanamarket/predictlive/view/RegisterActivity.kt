@@ -1,10 +1,11 @@
-package ir.liyanamarket.predictlive
+package ir.liyanamarket.predictlive.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendRegisterinterface
 import ir.liyanamarket.predictlive.dataclass.Register
 import ir.liyanamarket.predictlive.presenter.register.PresenterApiConnectRegister
@@ -38,7 +39,7 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
     override fun onsuccess(list: List<Register>) {
         when (list[0].result) {
             "success" -> {
-                val intent= Intent(applicationContext,SuccessRegisterActivityActivity::class.java)
+                val intent= Intent(applicationContext, SuccessRegisterActivityActivity::class.java)
               startActivity(intent)
               finishAffinity()
             }

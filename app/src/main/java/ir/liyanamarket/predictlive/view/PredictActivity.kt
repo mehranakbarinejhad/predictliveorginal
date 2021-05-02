@@ -41,7 +41,6 @@ class PredictActivity : AppCompatActivity(),SendSelectPredictInterface,SendSelec
 
 
     override fun onsuccessPredict(list: List<Predict>) {
-        Toast.makeText(this,list.toString(),Toast.LENGTH_LONG).show()
         predictlist=list
         presenterApiConnectSelectMatch.sendSelectMatchInterface=this
        presenterApiConnectSelectMatch.getmatch("000128")
@@ -53,7 +52,7 @@ class PredictActivity : AppCompatActivity(),SendSelectPredictInterface,SendSelec
     }
 
     override fun onsuccessMatch(list: List<Match>) {
-        Toast.makeText(this,intent.getStringExtra("usernameuser").toString(),Toast.LENGTH_LONG).show()
+
         predictAdapter.predictlist=predictlist
         predictAdapter.listmatch=list
         predictAdapter.sendinsertpredictInterface=this

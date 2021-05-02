@@ -14,9 +14,11 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.PredictLive"
         tools:ignore="AllowBackup">
-        <activity android:name=".SuccessRegisterActivityActivity"></activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".ValidateCodeActivity" />
+        <activity android:name=".ShopActivity"
+            android:theme="@style/ShopStyle"/>
+        <activity android:name=".view.SuccessRegisterActivityActivity" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.ValidateCodeActivity" />
         <activity android:name=".view.NumberActivity" />
         <activity android:name=".view.RecoveryActivity" />
         <activity android:name=".view.PredictActivity" />

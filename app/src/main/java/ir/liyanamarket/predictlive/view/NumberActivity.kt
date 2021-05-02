@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import ir.liyanamarket.predictlive.R
-import ir.liyanamarket.predictlive.ValidateCodeActivity
 import ir.liyanamarket.predictlive.`interface`.SendValidatePhoneNumberinterface
 import ir.liyanamarket.predictlive.dataclass.ValidatePhoneNumber
 import ir.liyanamarket.predictlive.presenter.validatephonenumber.PresenterApiConnectValidatePhoneNumber
@@ -37,7 +36,7 @@ class NumberActivity : AppCompatActivity(),SendValidatePhoneNumberinterface {
         }
         else
         {
-          val intent=Intent(applicationContext,ValidateCodeActivity::class.java)
+          val intent=Intent(applicationContext, ValidateCodeActivity::class.java)
             intent.putExtra("phonenumber",edt_phonenumber_numberactivity.text.toString())
             startActivity(intent)
             finish()

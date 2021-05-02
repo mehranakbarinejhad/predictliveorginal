@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".view.HomeActivity"
     android:background="@drawable/logingradint">
 
@@ -16,37 +18,46 @@
         android:id="@+id/frm_fragment"/>
 
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/appbar"
+     <com.google.android.material.bottomappbar.BottomAppBar
+         android:id="@+id/appbar"
         app:elevation="5dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
         android:layout_marginStart="-16sp"
-        app:fabCradleMargin="10dp"
         app:backgroundTint="#8294B1"
-        app:fabCradleRoundedCornerRadius="50dp"
-        app:fabCradleVerticalOffset="10dp"
         app:fabAlignmentMode="center"
+        app:fabAnimationMode="slide"
         android:layout_gravity="bottom"
+         app:fabCradleRoundedCornerRadius="10dp"
+         app:fabCradleMargin="4dp"
+         app:fabCradleVerticalOffset="2dp"
         >
+
+
+
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomnavigationview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
-            app:menu="@menu/bottom_menu"/>
+                     app:menu="@menu/bottom_menu"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
 
         android:layout_width="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/fab"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
         app:layout_anchor="@id/appbar"
-        android:contentDescription="@string/todo">
+        android:contentDescription="@string/todo"
+       android:elevation="6dp"
+        app:borderWidth="0dp"
+        android:backgroundTint="#C90D53"
+       >
+
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
 
 

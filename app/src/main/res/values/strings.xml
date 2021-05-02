@@ -31,9 +31,9 @@
     <string name="ranking">Ranking</string>
     <string name="setting">Setting</string>
     <string name="_5450">5450</string>
-    <string name="score">Score</string>
+    <string name="score">امتیاز من</string>
     <string name="_23">23</string>
-    <string name="rank">Rank</string>
+    <string name="rank">رتبه من</string>
     <string name="_5221">5221</string>
     <string name="_4870">4870</string>
     <string name="_3580">3580</string>
@@ -68,6 +68,33 @@
     <string name="name2">نام پروفایل:</string>
     <string name="changeprofile">تغییر پروفایل</string>
     <string name="changeprofileimage">تغییر تصویر پروفایل</string>
+    <string name="_5500">5500</string>
+    <string name="_124">124</string>
+    <string name="tablelegaue">جداول لیگ ها</string>
+    <string name="todaymatch">بازی های امروز</string>
+    <string name="kafsh">کفش</string>
+    <string name="news">جدیترین</string>
+    <string name="lowprice">ارزانترین</string>
+    <string name="highprice">گرانترین</string>
+    <string name="kafsh_juma">کفش ورزشی جوما</string>
+    <string name="juma_n51">juma-n51</string>
+    <string name="price">380,000</string>
+    <string name="toman">تومان</string>
+    <string name="badansazi">بدنسازی</string>
+    <string name="showall">نمایش همه</string>
+    <string name="mehranakbarinejhad">مهران اکبری نژاد</string>
+    <string name="fa_setting">تنظیمات</string>
+    <string name="chat_with_admin">گفتگو با فروشنده</string>
+    <string name="mybuy">خریدهای من</string>
+    <string name="mybasket">سبد خرید</string>
+ <string name="open">open</string>
+ <string name="close">close</string>
+
+    <string-array name="details">
+        <item>جدیدترین</item>
+        <item>ارزان ترین</item>
+        <item>گرانترین</item>
+    </string-array>
 
 
 </resources>

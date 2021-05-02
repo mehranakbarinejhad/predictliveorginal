@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:layout_margin="5dp"
+    >
+    <View
+        android:id="@+id/view_imageshape"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/viewimageshapegroupnotselected"
+
+        />
+    <ImageView
+        android:id="@+id/img_group"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hat"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/todo" />
+    <TextView
+        android:id="@+id/txt_namegroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/badansazi"
+        android:textSize="18sp"
+        android:textColor="#111"
+        android:fontFamily="@font/bmitra"
+        android:layout_below="@id/view_imageshape"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -3,6 +3,7 @@
     <words>
       <w>addbuttonpredictshape</w>
       <w>addfragment</w>
+      <w>adminshop</w>
       <w>akbari</w>
       <w>andalus</w>
       <w>apiconnectuser</w>
@@ -12,11 +13,17 @@
       <w>applymatchtorecycler</w>
       <w>applyuserpredicttorecycler</w>
       <w>backentery</w>
+      <w>backgroundparen</w>
+      <w>backicon</w>
+      <w>badansazi</w>
       <w>badgeshapetopranking</w>
+      <w>bmitra</w>
       <w>bmitrabold</w>
       <w>bottomnavigationview</w>
       <w>btnadd</w>
+      <w>btnnamegroup</w>
       <w>btnok</w>
+      <w>caht</w>
       <w>changeprofile</w>
       <w>changeprofileclick</w>
       <w>changeprofilefragment</w>
@@ -24,14 +31,17 @@
       <w>changeprofileinfragment</w>
       <w>checkboxbackground</w>
       <w>codeinterface</w>
+      <w>companname</w>
       <w>confirmpasswordhangeprofile</w>
       <w>connectapi</w>
       <w>connectinsert</w>
       <w>countrycode</w>
+      <w>countryimage</w>
       <w>createaccountclick</w>
       <w>createaccounttext</w>
       <w>customviewholder</w>
       <w>decodeimage</w>
+      <w>disablebuttonpredictlist</w>
       <w>edittextuserguestteamgols</w>
       <w>edittextuserhometeamgols</w>
       <w>edttextuserguestgols</w>
@@ -44,29 +54,45 @@
       <w>enteringtext</w>
       <w>esteghlal</w>
       <w>firstpresstime</w>
+      <w>flagkala</w>
       <w>fragmenthome</w>
       <w>fragmentranking</w>
       <w>framrankandscore</w>
       <w>frghome</w>
       <w>getcode</w>
       <w>getdata</w>
+      <w>getgroup</w>
       <w>getmatch</w>
       <w>getresult</w>
       <w>gradintscoreandrank</w>
+      <w>groupkala</w>
+      <w>groupname</w>
       <w>guesteamgols</w>
       <w>guestteam</w>
       <w>guestteamgols</w>
+      <w>havaeiaraq</w>
+      <w>headershop</w>
+      <w>highprice</w>
       <w>homeintent</w>
       <w>hometab</w>
       <w>hometeamgols</w>
       <w>imagebyte</w>
+      <w>imageflagh</w>
+      <w>imagegroup</w>
       <w>imageguest</w>
       <w>imageguestteam</w>
       <w>imagehome</w>
       <w>imagehometeam</w>
       <w>imageloginuser</w>
+      <w>imagepfileheader</w>
+      <w>imageprifle</w>
+      <w>imageprofile</w>
+      <w>imageprofileheader</w>
+      <w>imageshape</w>
+      <w>imagespineritem</w>
       <w>imagetobyte</w>
       <w>imageurl</w>
+      <w>imgkala</w>
       <w>inputtext</w>
       <w>insertorupdatepredict</w>
       <w>insertpredict</w>
@@ -74,47 +100,64 @@
       <w>intentlogin</w>
       <w>iranflag</w>
       <w>itemview</w>
+      <w>juma</w>
+      <w>kafsh</w>
       <w>koin</w>
+      <w>legaue</w>
       <w>linearoneranking</w>
       <w>linearparent</w>
+      <w>linearscoreranking</w>
       <w>listmatch</w>
       <w>listof</w>
       <w>listpredict</w>
+      <w>listspiner</w>
       <w>loadingshape</w>
       <w>loginactivity</w>
       <w>loginbutton</w>
       <w>logingradint</w>
       <w>logininfo</w>
       <w>loginlogo</w>
+      <w>lowprice</w>
       <w>matchdate</w>
       <w>matchid</w>
       <w>maxtime</w>
       <w>mehran</w>
+      <w>mehranakbarinejhad</w>
       <w>mnuhome</w>
       <w>mnurank</w>
       <w>mnusetting</w>
       <w>mnushop</w>
       <w>moshi</w>
+      <w>mybasket</w>
+      <w>mybuy</w>
       <w>myintent</w>
+      <w>namegroup</w>
+      <w>namekala</w>
       <w>nameuser</w>
       <w>numberinterface</w>
       <w>numbertwo</w>
       <w>oneranking</w>
       <w>onerror</w>
+      <w>onerrorgroup</w>
       <w>onresume</w>
       <w>onsuccess</w>
+      <w>onsuccessgroup</w>
       <w>passwordhangeprofile</w>
       <w>passwordloginuser</w>
       <w>passwordshared</w>
       <w>phonenumberloginuser</w>
       <w>predictlist</w>
       <w>predictlive</w>
+      <w>priceafteroff</w>
       <w>profilenamechangeprofile</w>
+      <w>profileshop</w>
       <w>rankinglistbackground</w>
       <w>rankingrecyclerlist</w>
       <w>rankingshape</w>
       <w>rankshape</w>
       <w>recoveryactivity</w>
+      <w>recyclerkala</w>
+      <w>recyclerkalaparent</w>
       <w>recyclerranking</w>
       <w>registeractivity</w>
       <w>registerinterface</w>
@@ -129,22 +172,41 @@
       <w>scoretextviewshape</w>
       <w>scorethreeranking</w>
       <w>sectiononehomegradint</w>
+      <w>sectiontableleague</w>
+      <w>sectiontopscorelegaue</w>
+      <w>sectionvideo</w>
+      <w>selectgroupkala</w>
+      <w>selectkala</w>
+      <w>selectkalawithgroup</w>
       <w>selectmatch</w>
       <w>selectpredict</w>
       <w>selectpredictbyuser</w>
       <w>selectpredicuser</w>
       <w>sendcode</w>
       <w>sendcodesms</w>
+      <w>sendcodetext</w>
       <w>senddatatoview</w>
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
       <w>servicesend</w>
+      <w>shapeprofilegradint</w>
+      <w>shaperecyclerkalaitem</w>
+      <w>shaperecyclerkalaitemblue</w>
+      <w>shaperecyclerkalaitemgreen</w>
       <w>shapescore</w>
       <w>shapesrank</w>
+      <w>showall</w>
       <w>simsun</w>
+      <w>spiner</w>
+      <w>spinerbackground</w>
+      <w>spineritem</w>
+      <w>spinerlist</w>
       <w>strimage</w>
       <w>swch</w>
+      <w>tabbutton</w>
+      <w>tabbuttonbackgroundsekected</w>
       <w>tabbuttonselect</w>
+      <w>tablelegaue</w>
       <w>teaminfo</w>
       <w>textadminguestgols</w>
       <w>textadminhomegols</w>
@@ -153,15 +215,23 @@
       <w>textstatus</w>
       <w>thiscontext</w>
       <w>threadapiconnectuser</w>
+      <w>titr</w>
+      <w>titrkala</w>
+      <w>todaymatch</w>
+      <w>toman</w>
+      <w>topscorelegaue</w>
       <w>txtadminguestgolas</w>
       <w>txtadminhomegols</w>
       <w>txtguestteamname</w>
       <w>txthometeamname</w>
       <w>txthometeamnamelenght</w>
       <w>txtname</w>
+      <w>txtnamegroup</w>
+      <w>txtnamekala</w>
       <w>txtrank</w>
       <w>txtscore</w>
       <w>txtstatus</w>
+      <w>txttitrkala</w>
       <w>usernamechangeprofile</w>
       <w>usernameloginuser</w>
       <w>usernameshared</w>
@@ -169,11 +239,15 @@
       <w>validatenumber</w>
       <w>validatephonenumber</w>
       <w>veiwscore</w>
+      <w>viewimageshape</w>
+      <w>viewimageshapegroupnotselected</w>
       <w>viewlogo</w>
       <w>viewrakingthree</w>
       <w>viewrank</w>
       <w>viewrankingone</w>
       <w>viewrankingtwo</w>
+      <w>viewscoreranking</w>
+      <w>zoomout</w>
     </words>
   </dictionary>
 </component>

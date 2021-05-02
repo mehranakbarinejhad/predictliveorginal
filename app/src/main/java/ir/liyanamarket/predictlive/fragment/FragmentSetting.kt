@@ -20,6 +20,7 @@ class FragmentSetting:Fragment(),SendChangeProfileInterface {
     lateinit var activity: AppCompatActivity
     private val presenterApiconnectChangeProfile:PresenterApiconnectChangeProfile by inject()
     private val encodeAndDecodeImage:EncodeAndDecodeImage by inject()
+    lateinit var strimage:String
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,17 +47,20 @@ class FragmentSetting:Fragment(),SendChangeProfileInterface {
         {
         val username=activity.intent.getStringExtra("usernameloginuser").toString()
             val path=data.data
-            val strimage=encodeAndDecodeImage.encodeimage(activity,path!!)
+             strimage=encodeAndDecodeImage.encodeimage(activity,path!!)
             presenterApiconnectChangeProfile.changeprofile(strimage,username)
         }
     }
 
     override fun onsuccess(list: List<ChangeProfile>) {
-        Toast.makeText(activity,"Changed Profile", Toast.LENGTH_LONG).show()
+
+
 
     }
 
     override fun onerror(t: Throwable) {
         Toast.makeText(activity,"Error",Toast.LENGTH_LONG).show()
     }
+
+
 }
