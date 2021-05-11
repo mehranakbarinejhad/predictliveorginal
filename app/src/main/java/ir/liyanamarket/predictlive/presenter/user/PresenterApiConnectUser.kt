@@ -20,6 +20,12 @@ private val apiconnectuser:ApiConnectUsers by inject()
       apiconnectuser.getdata().getusers("selectuser",username).enqueue(this)
 
 }
+    fun getusersbynumber(phonenumber:String){
+      apiconnectuser.getdatabynumber().getusersbynumber("selectuserbyphonenumber",phonenumber).enqueue(this)
+
+}
+
+
 
     override fun onResponse(call: Call<List<Users>>, response: Response<List<Users>>) {
         val data=response.body()

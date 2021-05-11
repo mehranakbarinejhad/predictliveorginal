@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="172dp"
-    android:layout_height="251dp"
+    android:layout_height="255dp"
     android:layout_gravity="center"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
@@ -16,7 +17,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bmitra"
         android:gravity="center"
-        android:text="@string/kafsh_juma"
+        tools:text="@string/kafsh_juma"
         android:textColor="#FFF"
         android:textSize="23sp" />
 
@@ -29,7 +30,7 @@
         android:layout_marginLeft="5dp"
         android:layout_toLeftOf="@id/img_flagkala"
         android:fontFamily="@font/andalus"
-        android:text="@string/juma_n51"
+        tools:text="@string/juma_n51"
         android:textColor="#FFF"
         android:textSize="17sp" />
 
@@ -43,46 +44,42 @@
         android:layout_marginRight="5dp"
         android:contentDescription="@string/todo"
         android:layout_marginTop="5dp"
-        android:src="@drawable/iranflag" />
+        tools:src="@drawable/iranflag" />
 
     <ImageView
         android:id="@+id/img_kala"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_below="@id/txt_namekala"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+     android:layout_margin="5dp"
         android:contentDescription="@string/todo"
-        android:src="@drawable/shoes" />
+        tools:src="@drawable/shoes" />
 
     <TextView
         android:id="@+id/txt_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img_kala"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
         android:fontFamily="@font/bmitrabold"
         android:gravity="left"
         android:layout_alignParentRight="true"
-        android:text="@string/price"
+        tools:text="@string/price"
         android:textColor="#FFF"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="5dp"
         android:textSize="24sp" />
     <TextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/img_kala"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+       android:layout_alignParentBottom="true"
         android:fontFamily="@font/bmitrabold"
         android:gravity="right"
         android:layout_toLeftOf="@id/txt_price"
-        android:text="@string/toman"
+        tools:text="@string/toman"
         android:layout_marginRight="5dp"
         android:textColor="#FFF"
-        android:textSize="20sp" />
+        android:textSize="24sp"
+        tools:ignore="RelativeOverlap" />
 
 
 

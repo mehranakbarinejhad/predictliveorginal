@@ -5,13 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.R
-import ir.liyanamarket.predictlive.ShopActivity
+import ir.liyanamarket.predictlive.view.ShopActivity
 
 
 import kotlinx.android.synthetic.main.homefragment.*
@@ -54,7 +53,7 @@ class FragmentHome():Fragment() {
         }
         catch (ex:Exception){}
         img_todaymatch.setOnClickListener {
-            val intent=Intent(activity2.applicationContext,ShopActivity::class.java)
+            val intent=Intent(activity2.applicationContext, ShopActivity::class.java)
             intent.putExtra("imageprofile",activity2.intent.getStringExtra("imageloginuser").toString())
             intent.putExtra("nameuser",activity2.intent.getStringExtra("nameuser").toString())
             activity2.startActivity(intent)

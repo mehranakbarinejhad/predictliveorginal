@@ -1,11 +1,13 @@
 package ir.liyanamarket.predictlive.dataclass
 
+import java.io.Serializable
+
 data class Kala(
     val id:Int,
     val titr:String,
     val name:String,
     val date:String,
-    val group:String,
+    val groupkala:String,
     val image:String,
     val Countryimage:String,
     val companname:String,
@@ -14,4 +16,4 @@ data class Kala(
     val priceafteroff:String,
     val size:String,
     val color:String
-)
+):Serializable

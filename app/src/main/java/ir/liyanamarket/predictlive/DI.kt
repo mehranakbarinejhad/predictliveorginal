@@ -24,9 +24,7 @@ import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
 import ir.liyanamarket.predictlive.presenter.validatephonenumber.PresenterApiConnectValidatePhoneNumber
-import ir.liyanamarket.predictlive.utils.CheckValidateInputPhoneNumber
-import ir.liyanamarket.predictlive.utils.EncodeAndDecodeImage
-import ir.liyanamarket.predictlive.utils.SaveLoginInfo
+import ir.liyanamarket.predictlive.utils.*
 import org.koin.dsl.module
 
 var appmadules= module {
@@ -64,4 +62,8 @@ var appmadules= module {
     single { ApiConnectGroup() }
     single { PresenterApiConnectGroup() }
     single { SpinerAdapter() }
+    single { FilterRecyclerViewKala() }
+    single { SearchkalaAdapter(get()) }
+    single { FragmentMessage() }
+    single { MyMessage() }
 }

@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MyApplication"
+        android:name=".view.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,8 +14,14 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.PredictLive"
         tools:ignore="AllowBackup">
-        <activity android:name=".ShopActivity"
-            android:theme="@style/ShopStyle"/>
+        <activity android:name=".view.ResultRecoveryActivity"></activity>
+        <activity android:name=".view.ValidateCodeRecoveryActivity" />
+        <activity
+            android:name=".view.SearchActivity"
+            android:theme="@style/ShopStyle" />
+        <activity
+            android:name=".view.ShopActivity"
+            android:theme="@style/ShopStyle" />
         <activity android:name=".view.SuccessRegisterActivityActivity" />
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.ValidateCodeActivity" />

@@ -1,28 +1,26 @@
 package ir.liyanamarket.predictlive.view
-
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendUsersInterface
 import ir.liyanamarket.predictlive.dataclass.Users
 import ir.liyanamarket.predictlive.fragment.FragmentProgressBar
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
+import ir.liyanamarket.predictlive.utils.MyMessage
 import ir.liyanamarket.predictlive.utils.SaveLoginInfo
-
 import kotlinx.android.synthetic.main.activity_login.*
 import org.koin.android.ext.android.inject
 
 
 class LoginActivity : AppCompatActivity(), SendUsersInterface {
     private val fragmentProgress: FragmentProgressBar by inject()
+    private val myMessage:MyMessage by inject()
     private val saveLoginInfo: SaveLoginInfo by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        myMessage.activity=this
         //region get info login
         val logininfo = saveLoginInfo.load()
         val usernameshared = logininfo.first
@@ -38,7 +36,8 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
         //region Login button clicked
         btn_login.setOnClickListener {
             if (edt_username.text.toString().isEmpty() || edt_password.text.toString().isEmpty()) {
-                Toast.makeText(this, "username or password is empty", Toast.LENGTH_LONG).show()
+
+                   myMessage.show("نام کاربری و رمز عبور را وارد نمایید.")
                 return@setOnClickListener
             }
             fragmentProgress.show(supportFragmentManager, "progressbar")
@@ -50,7 +49,7 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
         //endregion
         //region Text Recovery Click
         txt_revovery.setOnClickListener {
-            val intent = Intent(applicationContext, RecoveryActivity::class.java)
+           val intent = Intent(applicationContext, RecoveryActivity::class.java)
             startActivity(intent)
         }
         //endregion
@@ -79,11 +78,13 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
                 finishAffinity()
 
             } else {
-                Toast.makeText(this, "password wrong", Toast.LENGTH_LONG).show()
+
+                myMessage.show("رمز عبور اشتباه می باشد.")
 
             }
         } else {
-            Toast.makeText(this, "نام کاربری اشتباه می باشد", Toast.LENGTH_LONG).show()
+
+            myMessage.show( "نام کاربری اشتباه می باشد.")
 
         }
     }
@@ -93,7 +94,7 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
     //region Callback On error data
     override fun onerror(t: Throwable) {
         fragmentProgress.dismiss()
-        Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+        myMessage.show("لطفا وضعیت اینترنت را بررسی نمایید." )
 
     }
     //endregion

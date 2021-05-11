@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class PresenterApiConnectSelectKala:KoinComponent,Callback<List<Kala>> {
+class PresenterApiConnectSelectKala:KoinComponent,Callback<MutableList<Kala>> {
     private val apiConnectToSelectKala:ApiConnectToSelectKala by inject()
     lateinit var sendSelectKalaInterface: SendSelectKalaInterface
     fun selectkala(group:String){
@@ -17,7 +17,7 @@ class PresenterApiConnectSelectKala:KoinComponent,Callback<List<Kala>> {
 
     }
 
-    override fun onResponse(call: Call<List<Kala>>, response: Response<List<Kala>>) {
+    override fun onResponse(call: Call<MutableList<Kala>>, response: Response<MutableList<Kala>>) {
         val data=response.body()
         if(data!=null)
         {
@@ -26,7 +26,7 @@ class PresenterApiConnectSelectKala:KoinComponent,Callback<List<Kala>> {
 
     }
 
-    override fun onFailure(call: Call<List<Kala>>, t: Throwable) {
+    override fun onFailure(call: Call<MutableList<Kala>>, t: Throwable) {
         sendSelectKalaInterface.onerror(t)
     }
 }

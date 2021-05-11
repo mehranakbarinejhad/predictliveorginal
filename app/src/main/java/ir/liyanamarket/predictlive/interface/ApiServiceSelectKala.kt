@@ -9,7 +9,7 @@ interface ApiServiceSelectKala {
     @GET("Main.php")
     fun selectKala(
         @Query("action")action:String,
-        @Query("group")group:String
+        @Query("groupkala")group:String
 
-    ):Call<List<Kala>>
+    ):Call<MutableList<Kala>>
 }

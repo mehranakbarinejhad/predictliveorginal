@@ -3,7 +3,11 @@
     <words>
       <w>addbuttonpredictshape</w>
       <w>addfragment</w>
+      <w>addp</w>
+      <w>addpredict</w>
+      <w>adminguestgol</w>
       <w>adminshop</w>
+      <w>airmax</w>
       <w>akbari</w>
       <w>andalus</w>
       <w>apiconnectuser</w>
@@ -12,13 +16,18 @@
       <w>applubuttoncommand</w>
       <w>applymatchtorecycler</w>
       <w>applyuserpredicttorecycler</w>
+      <w>arraylist</w>
       <w>backentery</w>
       <w>backgroundparen</w>
+      <w>backgroundrecycleritemsearchactivity</w>
       <w>backicon</w>
       <w>badansazi</w>
+      <w>badgescorematchshape</w>
       <w>badgeshapetopranking</w>
       <w>bmitra</w>
       <w>bmitrabold</w>
+      <w>bordertextview</w>
+      <w>bottomnav</w>
       <w>bottomnavigationview</w>
       <w>btnadd</w>
       <w>btnnamegroup</w>
@@ -29,6 +38,7 @@
       <w>changeprofilefragment</w>
       <w>changeprofileimage</w>
       <w>changeprofileinfragment</w>
+      <w>charsearch</w>
       <w>checkboxbackground</w>
       <w>codeinterface</w>
       <w>companname</w>
@@ -39,9 +49,13 @@
       <w>countryimage</w>
       <w>createaccountclick</w>
       <w>createaccounttext</w>
+      <w>customtoolbar</w>
       <w>customviewholder</w>
       <w>decodeimage</w>
       <w>disablebuttonpredictlist</w>
+      <w>displaylist</w>
+      <w>drawerlayout</w>
+      <w>edittext</w>
       <w>edittextuserguestteamgols</w>
       <w>edittextuserhometeamgols</w>
       <w>edttextuserguestgols</w>
@@ -51,31 +65,44 @@
       <w>edtuserhomegoals</w>
       <w>edtuserhometeamgols</w>
       <w>encodeimage</w>
+      <w>entercodetext</w>
       <w>enteringtext</w>
       <w>esteghlal</w>
+      <w>filterlist</w>
+      <w>filtertext</w>
+      <w>firstedttext</w>
+      <w>firstlist</w>
       <w>firstpresstime</w>
       <w>flagkala</w>
+      <w>flist</w>
       <w>fragmenthome</w>
+      <w>fragmentmessage</w>
       <w>fragmentranking</w>
       <w>framrankandscore</w>
       <w>frghome</w>
       <w>getcode</w>
       <w>getdata</w>
+      <w>getdatabynumber</w>
       <w>getgroup</w>
       <w>getmatch</w>
       <w>getresult</w>
+      <w>getusersbynumber</w>
+      <w>gradintpredictlistitem</w>
       <w>gradintscoreandrank</w>
       <w>groupkala</w>
       <w>groupname</w>
       <w>guesteamgols</w>
       <w>guestteam</w>
       <w>guestteamgols</w>
+      <w>guestteamname</w>
       <w>havaeiaraq</w>
       <w>headershop</w>
       <w>highprice</w>
       <w>homeintent</w>
       <w>hometab</w>
+      <w>hometeam</w>
       <w>hometeamgols</w>
+      <w>hometeamname</w>
       <w>imagebyte</w>
       <w>imageflagh</w>
       <w>imagegroup</w>
@@ -92,6 +119,7 @@
       <w>imagespineritem</w>
       <w>imagetobyte</w>
       <w>imageurl</w>
+      <w>imageview</w>
       <w>imgkala</w>
       <w>inputtext</w>
       <w>insertorupdatepredict</w>
@@ -99,14 +127,20 @@
       <w>insertuser</w>
       <w>intentlogin</w>
       <w>iranflag</w>
+      <w>itemmenu</w>
       <w>itemview</w>
       <w>juma</w>
       <w>kafsh</w>
+      <w>kalalist</w>
       <w>koin</w>
+      <w>lastedttext</w>
       <w>legaue</w>
       <w>linearoneranking</w>
       <w>linearparent</w>
       <w>linearscoreranking</w>
+      <w>linesearchactivity</w>
+      <w>listf</w>
+      <w>listkala</w>
       <w>listmatch</w>
       <w>listof</w>
       <w>listpredict</w>
@@ -123,6 +157,8 @@
       <w>maxtime</w>
       <w>mehran</w>
       <w>mehranakbarinejhad</w>
+      <w>messagefragment</w>
+      <w>messageshape</w>
       <w>mnuhome</w>
       <w>mnurank</w>
       <w>mnusetting</w>
@@ -134,7 +170,11 @@
       <w>namegroup</w>
       <w>namekala</w>
       <w>nameuser</w>
+      <w>numberfive</w>
+      <w>numberfor</w>
       <w>numberinterface</w>
+      <w>numberone</w>
+      <w>numberthree</w>
       <w>numbertwo</w>
       <w>oneranking</w>
       <w>onerror</w>
@@ -146,8 +186,12 @@
       <w>passwordloginuser</w>
       <w>passwordshared</w>
       <w>phonenumberloginuser</w>
+      <w>predictedittextshape</w>
+      <w>predictitembuttonshape</w>
       <w>predictlist</w>
       <w>predictlive</w>
+      <w>predictrecyclerlist</w>
+      <w>predictrecyclershaper</w>
       <w>priceafteroff</w>
       <w>profilenamechangeprofile</w>
       <w>profileshop</w>
@@ -159,18 +203,29 @@
       <w>recyclerkala</w>
       <w>recyclerkalaparent</w>
       <w>recyclerranking</w>
+      <w>recyclersearchactivity</w>
       <w>registeractivity</w>
       <w>registerinterface</w>
       <w>relateiveparentranking</w>
       <w>remmember</w>
       <w>remmemberme</w>
+      <w>resendcodeclick</w>
+      <w>resultlist</w>
       <w>resultnumber</w>
+      <w>resultrecoveryactivity</w>
       <w>revovery</w>
       <w>rgisteractivity</w>
       <w>scoreloginuser</w>
       <w>scoreshape</w>
       <w>scoretextviewshape</w>
       <w>scorethreeranking</w>
+      <w>searchactivity</w>
+      <w>searchbutton</w>
+      <w>searchkala</w>
+      <w>searchkalawith</w>
+      <w>searchkalawithgroup</w>
+      <w>searchview</w>
+      <w>searchviewbutton</w>
       <w>sectiononehomegradint</w>
       <w>sectiontableleague</w>
       <w>sectiontopscorelegaue</w>
@@ -182,13 +237,16 @@
       <w>selectpredict</w>
       <w>selectpredictbyuser</w>
       <w>selectpredicuser</w>
+      <w>selectuserbyphonenumber</w>
       <w>sendcode</w>
       <w>sendcodesms</w>
       <w>sendcodetext</w>
       <w>senddatatoview</w>
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
+      <w>serachview</w>
       <w>servicesend</w>
+      <w>setfocus</w>
       <w>shapeprofilegradint</w>
       <w>shaperecyclerkalaitem</w>
       <w>shaperecyclerkalaitemblue</w>
@@ -212,6 +270,7 @@
       <w>textadminhomegols</w>
       <w>textguesteamname</w>
       <w>texthometeamname</w>
+      <w>textmessage</w>
       <w>textstatus</w>
       <w>thiscontext</w>
       <w>threadapiconnectuser</w>
@@ -221,6 +280,7 @@
       <w>toman</w>
       <w>topscorelegaue</w>
       <w>txtadminguestgolas</w>
+      <w>txtadminhomegoal</w>
       <w>txtadminhomegols</w>
       <w>txtguestteamname</w>
       <w>txthometeamname</w>
@@ -228,17 +288,24 @@
       <w>txtname</w>
       <w>txtnamegroup</w>
       <w>txtnamekala</w>
+      <w>txtprice</w>
       <w>txtrank</w>
       <w>txtscore</w>
       <w>txtstatus</w>
+      <w>txttitr</w>
       <w>txttitrkala</w>
+      <w>userguestteamgol</w>
+      <w>userhometeamgol</w>
       <w>usernamechangeprofile</w>
       <w>usernameloginuser</w>
       <w>usernameshared</w>
       <w>usernameuser</w>
+      <w>validateactivity</w>
       <w>validatenumber</w>
       <w>validatephonenumber</w>
       <w>veiwscore</w>
+      <w>viewguestshape</w>
+      <w>viewhomeshape</w>
       <w>viewimageshape</w>
       <w>viewimageshapegroupnotselected</w>
       <w>viewlogo</w>

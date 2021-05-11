@@ -11,7 +11,7 @@
     android:layout_marginTop="-135dp"
     >
     <View
-        android:id="@+id/logo"
+        android:id="@+id/logo_validateactivity"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:background="@drawable/loginlogo"
@@ -35,7 +35,7 @@
         android:textSize="22sp"
         android:fontFamily="@font/andalus"
         android:layout_marginTop="2dp"
-        android:layout_below="@id/logo"
+        android:layout_below="@id/logo_validateactivity"
         android:layout_centerHorizontal="true"
         android:textColor="#C6CBD4"/>
 
@@ -57,6 +57,7 @@
         android:textColorHint="#EDE9E9"
         android:textSize="19sp"
         android:layout_centerInParent="true"
+
 
         />
 
