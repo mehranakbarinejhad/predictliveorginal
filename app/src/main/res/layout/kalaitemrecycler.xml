@@ -19,7 +19,7 @@
         android:gravity="center"
         tools:text="@string/kafsh_juma"
         android:textColor="#FFF"
-        android:textSize="23sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_namekala"
@@ -48,8 +48,8 @@
 
     <ImageView
         android:id="@+id/img_kala"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
         android:layout_below="@id/txt_namekala"
         android:layout_centerHorizontal="true"
      android:layout_margin="5dp"
@@ -58,33 +58,23 @@
 
     <TextView
         android:id="@+id/txt_price"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:fontFamily="@font/bmitrabold"
-        android:gravity="left"
+        android:fontFamily="@font/gigi"
+        android:gravity="center"
         android:layout_alignParentRight="true"
         tools:text="@string/price"
         android:textColor="#FFF"
         android:layout_marginRight="5dp"
-        android:textSize="24sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_alignParentBottom="true"
-        android:fontFamily="@font/bmitrabold"
-        android:gravity="right"
-        android:layout_toLeftOf="@id/txt_price"
-        tools:text="@string/toman"
-        android:layout_marginRight="5dp"
-        android:textColor="#FFF"
-        android:textSize="24sp"
-        tools:ignore="RelativeOverlap" />
-
+        android:layout_toEndOf="@id/img_icon_next"
+        android:paddingRight="4dp"
+        android:textSize="20sp" />
 
 
 
     <ImageView
+        android:id="@+id/img_icon_next"
         android:layout_width="20dp"
         android:layout_height="20sp"
         android:layout_alignParentLeft="true"

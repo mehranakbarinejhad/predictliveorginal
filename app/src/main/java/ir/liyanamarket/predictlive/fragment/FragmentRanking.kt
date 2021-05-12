@@ -22,7 +22,7 @@ class FragmentRanking(private val thiscontext: Context):Fragment(),SendUsersInte
     private val picasso: Picasso by inject()
     lateinit var activity: AppCompatActivity
     private val fragmentProgress:FragmentProgressBar by inject()
-   private val rankingAdapter:RankingAdapter by inject()
+  private val rankingAdapter:RankingAdapter by inject()
 private val presenterApiConnectUser: PresenterApiConnectUser by inject()
 
 
@@ -52,7 +52,7 @@ private val presenterApiConnectUser: PresenterApiConnectUser by inject()
 
 
     override fun onsuccess(list: List<Users>) {
-
+    Toast.makeText(thiscontext,list.toString(),Toast.LENGTH_LONG).show()
         fragmentProgress.dismiss()
         try{
 

@@ -1,29 +1,31 @@
 package ir.liyanamarket.predictlive.utils
+import androidx.appcompat.app.AppCompatActivity
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
-import android.content.Context
-import android.widget.Toast
-
-class CheckValidateInputPhoneNumber(private val context: Context) {
-    fun validatenumber(phonenumber:String):Boolean {
-        var bool=true
+class CheckValidateInputPhoneNumber:KoinComponent {
+    lateinit var activity: AppCompatActivity
+    private val myMessage: MyMessage by inject()
+    fun validatenumber(phonenumber: String): Boolean {
+        myMessage.activity=activity
+        var bool = true
         when {
             phonenumber.isEmpty() -> {
-              //  MessageFragment("Warning","Please Enter PhoneNumber", R.drawable.ic_warning).show(activity.supportFragmentManager,"Message")
-                Toast.makeText(context,"Please Enter PhoneNumber",Toast.LENGTH_LONG).show()
-                bool=false
+
+               myMessage.show("لطفا شماره تلفن را وارد نمایید.")
+                bool = false
 
             }
             phonenumber.startsWith('0') -> {
-             //   MessageFragment("Warning","Please Enter PhoneNumber without 0 number", R.drawable.ic_warning).show(activity.supportFragmentManager,"Message")
-                Toast.makeText(context,"Please Enter PhoneNumber without 0 number",Toast.LENGTH_LONG).show()
 
-                bool=false
+                myMessage.show("لطفا شماره تلفن را بدون عدد 0 وارد نمایید.")
+
+                bool = false
             }
-            phonenumber.length!=10 -> {
-              //  MessageFragment("Warning","Phone Number Should Lenght 10", R.drawable.ic_warning).show(activity.supportFragmentManager,"Message")
-                Toast.makeText(context,"Phone Number Should Lenght 10",Toast.LENGTH_LONG).show()
+            phonenumber.length != 10 -> {
 
-                bool=false
+                myMessage.show("شماره تلفن بدون عدد 0 باید ده رقمی باشد")
+                bool = false
             }
 
         }

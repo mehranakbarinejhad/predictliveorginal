@@ -7,13 +7,13 @@
     android:id="@+id/loginprofile_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF"
+    android:background="@drawable/logingradint"
     tools:context=".view.RegisterActivity">
     <View
         android:id="@+id/Viewlogo"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:background="@drawable/loginlogoprofile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/loginlogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5sp"
         />
@@ -38,7 +38,7 @@
         android:fontFamily="@font/andalus"
         android:layout_marginTop="2dp"
         android:layout_gravity="center_horizontal|center_vertical"
-        android:textColor="#424243"
+        android:textColor="#FFF"
         android:layout_below="@id/Viewlogo"
         android:layout_centerHorizontal="true"
         />
@@ -47,8 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/txt_namelogo"
-        android:background="@drawable/loginprofileshape"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:weightSum="9"
         >
@@ -56,174 +55,96 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="horizontal"
-            android:layout_weight="6.5"
+            android:layout_weight="8"
             android:weightSum="7"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:background="@drawable/registerlinearshape"
+            android:layout_margin="10dp"
+            tools:ignore="UselessParent">
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="5"
                 android:orientation="vertical"
-                android:layout_marginStart="10dp"
-                android:weightSum="5"
+                android:weightSum="6"
                 tools:ignore="NestedWeights,UselessParent">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edt_name_loginprofileactivity"
                     android:inputType="text"
                     android:imeOptions="actionNext"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:maxLength="20"
-                    android:layout_marginEnd="40dp"
-                    android:backgroundTint="#AAB3BE"
-                    android:fontFamily="@font/bmitrabold"
-                    android:textColor="#DFE1E3"
-                    android:gravity="center"
-                    android:textColorHint="#AAB3BE"
-                    android:textSize="18sp"
-                    android:singleLine="true"
-                    android:layout_marginTop="40dp"
                     android:hint="@string/name"
-                    android:layout_marginStart="5dp"
                     tools:ignore="NestedWeights"
-                    android:backgroundTintMode="add"/>
+                    style="@style/RegisterTextViewStyle"
+                    />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edt_username_loginprofileactivity"
                     android:inputType="text"
                     android:imeOptions="actionNext"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginEnd="40dp"
-                    android:backgroundTint="#AAB3BE"
-                    android:fontFamily="@font/bmitrabold"
-                    android:textColor="#DFE1E3"
-                    android:gravity="center"
-                    android:textColorHint="#AAB3BE"
-                    android:textSize="18sp"
-                    android:singleLine="true"
                     android:hint="@string/username"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTintMode="add"/>
+                   style="@style/RegisterTextViewStyle"
+                    />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edt_password_loginprofileactivity"
                     android:inputType="textPassword"
                     android:imeOptions="actionNext"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginEnd="40dp"
-                    android:backgroundTint="#AAB3BE"
-                    android:fontFamily="@font/bmitrabold"
-                    android:textColor="#DFE1E3"
-                    android:gravity="center"
-                    android:textColorHint="#AAB3BE"
-                    android:textSize="18sp"
-                    android:singleLine="true"
                     android:hint="@string/password"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTintMode="add"/>
+                    style="@style/RegisterTextViewStyle"
+                    />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edt_confirm_loginprofileactivity"
                     android:inputType="textPassword"
                     android:imeOptions="actionDone"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginEnd="40dp"
-                    android:backgroundTint="#AAB3BE"
-                    android:fontFamily="@font/bmitrabold"
-                    android:textColor="#DFE1E3"
-                    android:gravity="center"
-                    android:textColorHint="#AAB3BE"
-                    android:textSize="18sp"
-                    android:singleLine="true"
                     android:hint="@string/confirm"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTintMode="add"/>
+                    style="@style/RegisterTextViewStyle"
+                  />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/edt_phonenumber_loginprofileactivity"
                     android:inputType="number"
                     android:imeOptions="actionDone"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginEnd="40dp"
-                    android:backgroundTint="#AAB3BE"
                     android:enabled="false"
-                    android:fontFamily="@font/bmitrabold"
-                    android:textColor="#DFE1E3"
-                    android:gravity="center"
-                    android:textColorHint="#AAB3BE"
-                    android:textSize="18sp"
-                    android:singleLine="true"
                     android:hint="@string/phone_number"
-                    android:layout_marginStart="5dp"
-                    android:backgroundTintMode="add"/>
+                    style="@style/RegisterTextViewStyle"
+                    android:elevation="5sp"
+                  />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_register_loginprofileactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/register"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/bmitrabold"
+                    android:textAllCaps="false"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/loginbutton"
+                    android:textColor="#FFF"/>
 
             </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_register_loginprofileactivity"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="@string/register"
-                android:textSize="25sp"
-                android:fontFamily="@font/bmitrabold"
-                android:textAllCaps="false"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="70dp"
-                android:background="@drawable/loginbutton"
-                android:textColor="#FFF"/>
-        </LinearLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            >
-            <TextView
-                android:id="@+id/txt_loginaccounttext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:layout_alignParentRight="true"
-                android:fontFamily="@font/bmitrabold"
-                android:textColor="#9CA0A7"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
 
-                android:text="@string/do_have_an_account"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5dp"
-                />
 
-            <TextView
-                android:id="@+id/txt_loginclick_loginprofileactivity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_toStartOf="@id/txt_loginaccounttext"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentBottom="true"
-                android:text="@string/login"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/bmitrabold"
-                android:textColor="#03A9F4"
-                android:textSize="22sp" />
-        </RelativeLayout>
 
 
 

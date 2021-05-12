@@ -1,6 +1,8 @@
 package ir.liyanamarket.predictlive.view
 
+import android.app.ActivityManager
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,6 +13,7 @@ import ir.liyanamarket.predictlive.fragment.FragmentRanking
 import ir.liyanamarket.predictlive.fragment.FragmentSetting
 import kotlinx.android.synthetic.main.activity_home.*
 import org.koin.android.ext.android.inject
+import java.lang.Exception
 
 
 class HomeActivity : AppCompatActivity() {
@@ -59,24 +62,13 @@ class HomeActivity : AppCompatActivity() {
             )
             startActivity(homeIntent)
 
-
-            /*
-   val count=supportFragmentManager.backStackEntryCount
-               Toast.makeText(this,count.toString(),Toast.LENGTH_LONG).show()
-
-   var index=supportFragmentManager.backStackEntryCount-1
-               supportFragmentManager.popBackStack()
-               val backentery=supportFragmentManager.getBackStackEntryAt(index)
-               var stckid=backentery.id
-               bottomnavigationview.menu.getItem(stckid).isChecked = true*/
         }
     }
 
 
     override fun onBackPressed() {
         if (firstpresstime + maxtime > System.currentTimeMillis()) {
-
-            finishAffinity()
+            finish()
 
         } else {
             Toast.makeText(this, "برای خروج دوبار کلیک کنید.", Toast.LENGTH_SHORT).show()
@@ -89,4 +81,5 @@ class HomeActivity : AppCompatActivity() {
             .addToBackStack(null).commit()
 
     }
+
 }

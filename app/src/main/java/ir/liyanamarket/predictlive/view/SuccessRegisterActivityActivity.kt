@@ -17,10 +17,4 @@ class SuccessRegisterActivityActivity : AppCompatActivity() {
 
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-        val intent=Intent(applicationContext,LoginActivity::class.java)
-        startActivity(intent)
-        finishAffinity()
-    }
 }

@@ -9,13 +9,18 @@ import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendRegisterinterface
 import ir.liyanamarket.predictlive.dataclass.Register
 import ir.liyanamarket.predictlive.presenter.register.PresenterApiConnectRegister
+import ir.liyanamarket.predictlive.utils.MyMessage
 import kotlinx.android.synthetic.main.activity_register.*
 import org.koin.android.ext.android.inject
 
 class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
     private val presenterApiConnectRegister:PresenterApiConnectRegister by inject()
+    private val myMessage: MyMessage by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        myMessage.activity=this
+
         setContentView(R.layout.activity_register)
         val phonenumber=intent.getStringExtra("phonenumber").toString()
         edt_phonenumber_loginprofileactivity.setText(phonenumber)
@@ -41,10 +46,10 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
             "success" -> {
                 val intent= Intent(applicationContext, SuccessRegisterActivityActivity::class.java)
               startActivity(intent)
-              finishAffinity()
+             finish()
             }
             "username" -> {
-            Toast.makeText(this,"Username Is Validate! Please Another Username",Toast.LENGTH_LONG).show()
+                myMessage.show("این نام کاربری آزاد نمی باشد!لطفا نام کاربری دیگری را وارد نمایید. ")
             }
 
         }
@@ -69,13 +74,14 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
                 presenterApiConnectRegister.register(name.text.toString(),username.text.toString(),password.text.toString(),phonenumber.text.toString())
 
             } else {
-                Toast.makeText(this, "password and confirm no equals!", Toast.LENGTH_LONG)
-                    .show()
+
+
+                myMessage.show("رمز عبور با تکرار آن یکسان نمی باشد.")
 
             }
         } else {
-            Toast.makeText(this, "inputtext is  empty! please check inputs", Toast.LENGTH_LONG)
-                .show()
+
+            myMessage.show("لطفا تمام ورودی ها را پر نمایید.")
         }
     }
 }

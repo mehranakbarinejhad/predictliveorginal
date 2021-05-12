@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
                 val intentlogin = Intent(applicationContext, HomeActivity::class.java)
                 putDataUserToIntent(list, intentlogin)
                 startActivity(intentlogin)
-                finishAffinity()
+                finish()
 
             } else {
 

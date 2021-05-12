@@ -48,7 +48,7 @@ var appmadules= module {
     single { EncodeAndDecodeImage() }
     single { FragmentSetting() }
     single { SaveLoginInfo(get()) }
-    single { CheckValidateInputPhoneNumber(get()) }
+    single { CheckValidateInputPhoneNumber() }
     single { ApiConnectValidatePhoneNumber() }
     single { PresenterApiConnectValidatePhoneNumber() }
     single { ApiConnectSendCode() }
@@ -56,7 +56,7 @@ var appmadules= module {
     single { ApiConnectRegister() }
     single { PresenterApiConnectRegister() }
     single { ApiConnectToSelectKala() }
-    single { PresenterApiConnectSelectKala() }
+    single { PresenterApiConnectSelectKala(get()) }
     single { GroupKalaAdapter() }
     single { KalaAdapter(get()) }
     single { ApiConnectGroup() }

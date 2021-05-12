@@ -2,14 +2,14 @@ package ir.liyanamarket.predictlive.`interface`
 
 import ir.liyanamarket.predictlive.dataclass.ValidatePhoneNumber
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiServiceValidatePhoneNumber
 {
-    @GET("Main.php")
+    @FormUrlEncoded
+    @POST("Main.php")
     fun resultnumber(
-        @Query("action") action: String,
-        @Query("phonenumber") phonenumber: String
+        @Field("action") action: String,
+        @Field("phonenumber") phonenumber: String
     ): Call<List<ValidatePhoneNumber>>
 }

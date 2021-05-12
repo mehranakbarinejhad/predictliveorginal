@@ -2,14 +2,14 @@ package ir.liyanamarket.predictlive.`interface`
 
 import ir.liyanamarket.predictlive.dataclass.Kala
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiServiceSelectKala {
-    @GET("Main.php")
-    fun selectKala(
-        @Query("action")action:String,
-        @Query("groupkala")group:String
+    @FormUrlEncoded
+    @POST("Main.php")
+   fun selectKala(
+       @Field("action")action:String,
+        @Field("groupkala")group:String
+   ):Call<MutableList<Kala>>
 
-    ):Call<MutableList<Kala>>
 }

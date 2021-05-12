@@ -2,13 +2,13 @@ package ir.liyanamarket.predictlive.`interface`
 
 import ir.liyanamarket.predictlive.dataclass.Users
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiServicesUsersByPhoneNumber {
-    @GET("Main.php")
+    @FormUrlEncoded
+    @POST("Main.php")
     fun getusersbynumber(
-        @Query("action")action:String,
-        @Query("phonenumber")username:String
+        @Field("action")action:String,
+        @Field("phonenumber")username:String
     ): Call<List<Users>>
 }

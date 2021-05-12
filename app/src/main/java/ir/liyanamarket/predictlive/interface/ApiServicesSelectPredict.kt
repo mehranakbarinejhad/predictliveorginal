@@ -2,13 +2,13 @@ package ir.liyanamarket.predictlive.`interface`
 
 import ir.liyanamarket.predictlive.dataclass.Predict
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface ApiServicesSelectPredict {
-    @GET("Main.php")
+    @FormUrlEncoded
+    @POST("Main.php")
     fun selectpredicuser(
-        @Query("action")action:String,
-        @Query("username")username:String,
+        @Field("action")action:String,
+        @Field("username")username:String,
         ): Call<List<Predict>>
 }

@@ -25,6 +25,7 @@ import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelect
 import kotlinx.android.synthetic.main.activity_shop.*
 import kotlinx.android.synthetic.main.toolbar_shop.*
 import org.koin.android.ext.android.inject
+
 import kotlin.collections.ArrayList
 
 class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInterface {
@@ -55,8 +56,6 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop)
 
-       /* arraylist.clear()
-        listkala.clear()*/
         //region set customtoolbar
         setSupportActionBar(m_toolbar_shop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -78,8 +77,9 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
         spineritem.adapter = spinerAdapter
         //endregion
         //region set All List Kala To recyclerview Kala
-        presenterApiConnectSelectKala.sendSelectKalaInterface = this
+       presenterApiConnectSelectKala.sendSelectKalaInterface = this
         presenterApiConnectSelectKala.selectkala("All")
+
         //endregion
         //region set Group To RecyclerView Group
         presenterApiConnectGroup.sendGroupInterface = this
@@ -90,8 +90,6 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
     //endregion
     //region Onsuccess Or onError Callback Kala List
     override fun onsuccess(list: MutableList<Kala>) {
-
-        Toast.makeText(this,list[16].name,Toast.LENGTH_LONG).show()
         arraylist = list as ArrayList<Kala>
         kalaAdapter.list = list
         recyclerkala.apply {
