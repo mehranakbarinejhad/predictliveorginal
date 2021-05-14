@@ -1,8 +1,5 @@
 package ir.liyanamarket.predictlive.view
-
-import android.app.ActivityManager
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,8 +10,6 @@ import ir.liyanamarket.predictlive.fragment.FragmentRanking
 import ir.liyanamarket.predictlive.fragment.FragmentSetting
 import kotlinx.android.synthetic.main.activity_home.*
 import org.koin.android.ext.android.inject
-import java.lang.Exception
-
 
 class HomeActivity : AppCompatActivity() {
     private var firstpresstime = 0L
@@ -22,7 +17,6 @@ class HomeActivity : AppCompatActivity() {
     private val fragmenthome: FragmentHome by inject()
     private val fragmentranking: FragmentRanking by inject()
     private val fragmentSetting: FragmentSetting by inject()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +43,18 @@ class HomeActivity : AppCompatActivity() {
                     addfragment(fragmentSetting)
                     return@setOnNavigationItemSelectedListener true
                 }
+                 R.id.mnushop -> {
+                     val intent = Intent(this.applicationContext, ShopActivity::class.java)
+                     intent.putExtra(
+                         "imageprofile",
+                        intent.getStringExtra("imageloginuser").toString()
+                     )
+                     intent.putExtra("nameuser",intent.getStringExtra("nameuser").toString())
+                     startActivity(intent)
+                    return@setOnNavigationItemSelectedListener true
+                }
+
+
             }
             false
         }

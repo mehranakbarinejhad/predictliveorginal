@@ -2,10 +2,14 @@ package ir.liyanamarket.predictlive.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import ir.liyanamarket.predictlive.R
+import ir.liyanamarket.predictlive.`interface`.SendSelectRankingUser
 import ir.liyanamarket.predictlive.`interface`.SendUsersInterface
+import ir.liyanamarket.predictlive.dataclass.RankingUser
 import ir.liyanamarket.predictlive.dataclass.Users
 import ir.liyanamarket.predictlive.fragment.FragmentProgressBar
+import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectRankingUser
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
 import ir.liyanamarket.predictlive.utils.MyMessage
 import ir.liyanamarket.predictlive.utils.SaveLoginInfo
@@ -17,9 +21,11 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
     private val fragmentProgress: FragmentProgressBar by inject()
     private val myMessage:MyMessage by inject()
     private val saveLoginInfo: SaveLoginInfo by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         myMessage.activity=this
         //region get info login
         val logininfo = saveLoginInfo.load()
@@ -109,6 +115,10 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
         intent.putExtra("imageloginuser", list[0].image)
         intent.putExtra("phonenumberloginuser", list[0].phonenumber)
         intent.putExtra("scoreloginuser", list[0].Score)
+
+
     }
+
+
     //endregion
 }

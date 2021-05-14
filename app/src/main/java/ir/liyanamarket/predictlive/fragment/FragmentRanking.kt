@@ -52,7 +52,7 @@ private val presenterApiConnectUser: PresenterApiConnectUser by inject()
 
 
     override fun onsuccess(list: List<Users>) {
-    Toast.makeText(thiscontext,list.toString(),Toast.LENGTH_LONG).show()
+
         fragmentProgress.dismiss()
         try{
 

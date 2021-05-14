@@ -61,6 +61,7 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.title="فروشگاه"
+        kalaAdapter.activity=this
 
 //endregion
 

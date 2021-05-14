@@ -11,6 +11,8 @@ data class Kala(
     val image:String,
     val Countryimage:String,
     val companname:String,
+    val description:String,
+    val details:String,
     val price:String,
     val off:String,
     val priceafteroff:String,

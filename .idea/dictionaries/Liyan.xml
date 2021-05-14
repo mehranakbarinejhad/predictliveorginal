@@ -53,6 +53,11 @@
       <w>customtoolbar</w>
       <w>customviewholder</w>
       <w>decodeimage</w>
+      <w>descriptionkala</w>
+      <w>descriptiontab</w>
+      <w>detailsactivity</w>
+      <w>detailskala</w>
+      <w>detailstab</w>
       <w>disablebuttonpredictlist</w>
       <w>displaylist</w>
       <w>drawerlayout</w>
@@ -74,6 +79,7 @@
       <w>firstedttext</w>
       <w>firstlist</w>
       <w>firstpresstime</w>
+      <w>firsttab</w>
       <w>flagkala</w>
       <w>flist</w>
       <w>fragmenthome</w>
@@ -86,6 +92,7 @@
       <w>getdatabynumber</w>
       <w>getgroup</w>
       <w>getmatch</w>
+      <w>getranking</w>
       <w>getresult</w>
       <w>getusersbynumber</w>
       <w>gradintpredictlistitem</w>
@@ -186,9 +193,11 @@
       <w>oneranking</w>
       <w>onerror</w>
       <w>onerrorgroup</w>
+      <w>onerrorrankinguser</w>
       <w>onresume</w>
       <w>onsuccess</w>
       <w>onsuccessgroup</w>
+      <w>onsuccessrankinguser</w>
       <w>passwordhangeprofile</w>
       <w>passwordloginuser</w>
       <w>passwordshared</w>
@@ -249,7 +258,9 @@
       <w>selectpredict</w>
       <w>selectpredictbyuser</w>
       <w>selectpredicuser</w>
+      <w>selectranking</w>
       <w>selectuserbyphonenumber</w>
+      <w>selectuserranking</w>
       <w>sendcode</w>
       <w>sendcodesms</w>
       <w>sendcodetext</w>
@@ -257,6 +268,7 @@
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
       <w>serachview</w>
+      <w>serevices</w>
       <w>servicesend</w>
       <w>setfocus</w>
       <w>shapeprofilegradint</w>
@@ -265,6 +277,7 @@
       <w>shaperecyclerkalaitemgreen</w>
       <w>shapescore</w>
       <w>shapesrank</w>
+      <w>shapetablayout</w>
       <w>showall</w>
       <w>simsun</w>
       <w>smscode</w>
@@ -272,11 +285,13 @@
       <w>spinerbackground</w>
       <w>spineritem</w>
       <w>spinerlist</w>
+      <w>spltext</w>
       <w>strimage</w>
       <w>swch</w>
       <w>tabbutton</w>
       <w>tabbuttonbackgroundsekected</w>
       <w>tabbuttonselect</w>
+      <w>tablayout</w>
       <w>tablelegaue</w>
       <w>teaminfo</w>
       <w>textadminguestgols</w>

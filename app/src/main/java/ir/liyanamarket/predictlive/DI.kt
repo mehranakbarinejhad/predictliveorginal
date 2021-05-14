@@ -12,6 +12,7 @@ import ir.liyanamarket.predictlive.model.register.ApiConnectRegister
 import ir.liyanamarket.predictlive.model.sendcode.ApiConnectSendCode
 import ir.liyanamarket.predictlive.model.shop.group.ApiConnectGroup
 import ir.liyanamarket.predictlive.model.shop.kala.ApiConnectToSelectKala
+import ir.liyanamarket.predictlive.model.user.ApiConnectRankingUser
 import ir.liyanamarket.predictlive.model.user.ApiConnectUsers
 import ir.liyanamarket.predictlive.model.validatephonenumber.ApiConnectValidatePhoneNumber
 import ir.liyanamarket.predictlive.presenter.changeprofile.PresenterApiconnectChangeProfile
@@ -22,6 +23,7 @@ import ir.liyanamarket.predictlive.presenter.register.PresenterApiConnectRegiste
 import ir.liyanamarket.predictlive.presenter.sendcode.PresenterApiConnectSendCode
 import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
+import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectRankingUser
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
 import ir.liyanamarket.predictlive.presenter.validatephonenumber.PresenterApiConnectValidatePhoneNumber
 import ir.liyanamarket.predictlive.utils.*
@@ -66,4 +68,6 @@ var appmadules= module {
     single { SearchkalaAdapter(get()) }
     single { FragmentMessage() }
     single { MyMessage() }
+    single { ApiConnectRankingUser() }
+    single { PresenterApiConnectRankingUser() }
 }

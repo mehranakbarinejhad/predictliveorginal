@@ -14,7 +14,8 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.PredictLive"
         tools:ignore="AllowBackup">
-        <activity android:name=".view.ResultRecoveryActivity"></activity>
+        <activity android:name=".DetailsKalaActivity"></activity>
+        <activity android:name=".view.ResultRecoveryActivity" />
         <activity android:name=".view.ValidateCodeRecoveryActivity" />
         <activity
             android:name=".view.SearchActivity"

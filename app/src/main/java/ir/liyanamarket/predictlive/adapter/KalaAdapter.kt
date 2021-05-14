@@ -1,19 +1,23 @@
 package ir.liyanamarket.predictlive.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import ir.liyanamarket.predictlive.DetailsKalaActivity
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.dataclass.Kala
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
-class KalaAdapter(private var context:Context) : RecyclerView.Adapter<KalaAdapter.Customviewholder>(),KoinComponent {
+class KalaAdapter( var context:Context) : RecyclerView.Adapter<KalaAdapter.Customviewholder>(),KoinComponent {
+    lateinit var activity:AppCompatActivity
     private val picasso:Picasso by inject()
     lateinit var list: MutableList<Kala>
 
@@ -49,6 +53,16 @@ class KalaAdapter(private var context:Context) : RecyclerView.Adapter<KalaAdapte
             6->holder.recyclerkalaparent.setBackgroundResource(R.drawable.shaperecyclerkalaitempink)
            7->holder.recyclerkalaparent.setBackgroundResource(R.drawable.shaperecyclerkalaitembrown)
 
+        }
+        holder.recyclerkalaparent.setOnClickListener {
+            val intent=Intent(activity,DetailsKalaActivity::class.java)
+            intent.putExtra("image",list[position].image)
+            intent.putExtra("price",list[position].price)
+            intent.putExtra("titr",list[position].titr)
+            intent.putExtra("details",list[position].details)
+            intent.putExtra("description",list[position].description)
+
+            activity.startActivity(intent)
         }
 
 

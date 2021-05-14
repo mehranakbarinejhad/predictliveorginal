@@ -2,7 +2,7 @@
     <string name="app_name">PredictLive</string>
     <string name="username">نام کاربری</string>
     <string name="password">رمز عبور</string>
-     <string name="password2">رمز عبور:</string>
+    <string name="password2">رمز عبور:</string>
 
     <string name="remmember_me">مرا به خاطر بسپار! </string>
     <string name="login">ورود</string>
@@ -99,6 +99,9 @@
     <string name="search">جستجو</string>
     <string name="fa_message">این یک پیغام می باشد.</string>
     <string name="login2">ورود</string>
+    <string name="detailskala">مشخصات:</string>
+    <string name="Add_basket_text">افزودن به سبد خرید</string>
+    <string name="descriptions">توضیحات</string>
 
     <string-array name="details">
         <item>جدیدترین</item>

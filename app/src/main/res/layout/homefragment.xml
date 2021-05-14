@@ -1,12 +1,9 @@
-
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="80dp"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="80dp">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -113,20 +110,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="3dp"
                 />
-            <ImageView
-                android:id="@+id/img_changeprofileclick"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_baseline_edit_24"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="5dp"
-
-                android:contentDescription="@string/todo" />
 
 
         </androidx.cardview.widget.CardView>
-
 
         <View
             android:id="@+id/viewscoreranking"
@@ -153,7 +139,7 @@
 
 
             android:gravity="center"
-            android:text="@string/_5500"
+            tools:text="@string/_5500"
             android:textColor="#2DA599"
             android:textSize="30sp" />
 
@@ -173,14 +159,14 @@
 
 
         <TextView
+            android:id="@+id/txt_ranking"
             android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:textColor="#6EB2E8"
             android:gravity="center"
-            android:text="@string/_124"
+            tools:text="@string/_124"
             android:textSize="30sp"
             android:fontFamily="@font/bmitrabold"
-
             android:layout_toLeftOf="@id/linearscoreranking"
             android:layout_marginRight="5dp"
             android:layout_alignBottom="@id/viewscoreranking"
