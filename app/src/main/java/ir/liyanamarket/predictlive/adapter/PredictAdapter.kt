@@ -14,8 +14,8 @@ import ir.liyanamarket.predictlive.`interface`.SendinsertpredictInterface
 import ir.liyanamarket.predictlive.dataclass.Match
 import ir.liyanamarket.predictlive.dataclass.Predict
 import ir.liyanamarket.predictlive.presenter.predict.PresenterApiConnectinsertPredict
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class PredictAdapter(private val context: Context) :
     RecyclerView.Adapter<PredictAdapter.Customviewholder>(), KoinComponent {

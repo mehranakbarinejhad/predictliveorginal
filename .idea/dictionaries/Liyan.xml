@@ -5,6 +5,7 @@
       <w>addfragment</w>
       <w>addp</w>
       <w>addpredict</w>
+      <w>addtobasket</w>
       <w>adminguestgol</w>
       <w>adminshop</w>
       <w>airmax</w>
@@ -25,15 +26,21 @@
       <w>badansazi</w>
       <w>badgescorematchshape</w>
       <w>badgeshapetopranking</w>
+      <w>basketactivity</w>
       <w>bmitra</w>
       <w>bmitrabold</w>
       <w>bordertextview</w>
+      <w>bottnclickchangecolor</w>
+      <w>bottombackgrounddetailsactivity</w>
       <w>bottomnav</w>
+      <w>bottomnavigationbackground</w>
+      <w>bottomnavigationstyle</w>
       <w>bottomnavigationview</w>
       <w>btnadd</w>
       <w>btnnamegroup</w>
       <w>btnok</w>
       <w>caht</w>
+      <w>calista</w>
       <w>changeprofile</w>
       <w>changeprofileclick</w>
       <w>changeprofilefragment</w>
@@ -42,6 +49,7 @@
       <w>charsearch</w>
       <w>checkboxbackground</w>
       <w>codeinterface</w>
+      <w>codekala</w>
       <w>companname</w>
       <w>confirmpasswordhangeprofile</w>
       <w>connectapi</w>
@@ -53,14 +61,20 @@
       <w>customtoolbar</w>
       <w>customviewholder</w>
       <w>decodeimage</w>
+      <w>deletebasket</w>
       <w>descriptionkala</w>
       <w>descriptiontab</w>
       <w>detailsactivity</w>
+      <w>detailsactivitystyle</w>
       <w>detailskala</w>
       <w>detailstab</w>
       <w>disablebuttonpredictlist</w>
       <w>displaylist</w>
       <w>drawerlayout</w>
+      <w>editbasket</w>
+      <w>edittedad</w>
+      <w>edittedadakala</w>
+      <w>edittedadkala</w>
       <w>edittext</w>
       <w>edittextuserguestteamgols</w>
       <w>edittextuserhometeamgols</w>
@@ -82,6 +96,7 @@
       <w>firsttab</w>
       <w>flagkala</w>
       <w>flist</w>
+      <w>fontdinerdotcomjazzdark</w>
       <w>fragmenthome</w>
       <w>fragmentmessage</w>
       <w>fragmentranking</w>
@@ -95,6 +110,7 @@
       <w>getranking</w>
       <w>getresult</w>
       <w>getusersbynumber</w>
+      <w>gradintimagedetailsactivity</w>
       <w>gradintpredictlistitem</w>
       <w>gradintscoreandrank</w>
       <w>groupkala</w>
@@ -112,12 +128,14 @@
       <w>hometeamgols</w>
       <w>hometeamname</w>
       <w>imagebyte</w>
+      <w>imageclose</w>
       <w>imageflagh</w>
       <w>imagegroup</w>
       <w>imageguest</w>
       <w>imageguestteam</w>
       <w>imagehome</w>
       <w>imagehometeam</w>
+      <w>imagekala</w>
       <w>imageloginuser</w>
       <w>imagepfileheader</w>
       <w>imageprifle</w>
@@ -129,7 +147,10 @@
       <w>imageurl</w>
       <w>imageview</w>
       <w>imgkala</w>
+      <w>indexsize</w>
       <w>inputtext</w>
+      <w>insertbasket</w>
+      <w>insertkalatobasket</w>
       <w>insertorupdatepredict</w>
       <w>insertpredict</w>
       <w>insertuser</w>
@@ -172,6 +193,9 @@
       <w>mehranakbarinejhad</w>
       <w>messagefragment</w>
       <w>messageshape</w>
+      <w>minez</w>
+      <w>minezkala</w>
+      <w>miya</w>
       <w>mnuhome</w>
       <w>mnurank</w>
       <w>mnusetting</w>
@@ -184,6 +208,7 @@
       <w>namekala</w>
       <w>namelogo</w>
       <w>nameuser</w>
+      <w>nobasket</w>
       <w>numberfive</w>
       <w>numberfor</w>
       <w>numberinterface</w>
@@ -192,9 +217,11 @@
       <w>numbertwo</w>
       <w>oneranking</w>
       <w>onerror</w>
+      <w>onerrorbasket</w>
       <w>onerrorgroup</w>
       <w>onerrorrankinguser</w>
       <w>onresume</w>
+      <w>onsiccess</w>
       <w>onsuccess</w>
       <w>onsuccessgroup</w>
       <w>onsuccessrankinguser</w>
@@ -202,6 +229,8 @@
       <w>passwordloginuser</w>
       <w>passwordshared</w>
       <w>phonenumberloginuser</w>
+      <w>pluseminezlinear</w>
+      <w>pluskala</w>
       <w>postaction</w>
       <w>postgroupkala</w>
       <w>predictedittextshape</w>
@@ -211,6 +240,7 @@
       <w>predictrecyclerlist</w>
       <w>predictrecyclershaper</w>
       <w>priceafteroff</w>
+      <w>pricekala</w>
       <w>profilenamechangeprofile</w>
       <w>profileshop</w>
       <w>rankinglistbackground</w>
@@ -265,26 +295,38 @@
       <w>sendcodesms</w>
       <w>sendcodetext</w>
       <w>senddatatoview</w>
+      <w>sendinsert</w>
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
       <w>serachview</w>
       <w>serevices</w>
       <w>servicesend</w>
       <w>setfocus</w>
+      <w>setmargin</w>
+      <w>shapebasketrecyclerparent</w>
+      <w>shapebuttondetailsactivity</w>
+      <w>shapelinearlayoutdescriptiondetails</w>
       <w>shapeprofilegradint</w>
       <w>shaperecyclerkalaitem</w>
       <w>shaperecyclerkalaitemblue</w>
       <w>shaperecyclerkalaitemgreen</w>
       <w>shapescore</w>
       <w>shapesrank</w>
+      <w>shapetabitemseleected</w>
       <w>shapetablayout</w>
       <w>showall</w>
+      <w>showallbasket</w>
+      <w>showbasket</w>
       <w>simsun</w>
+      <w>sizekala</w>
+      <w>sizetext</w>
       <w>smscode</w>
       <w>spiner</w>
       <w>spinerbackground</w>
       <w>spineritem</w>
       <w>spinerlist</w>
+      <w>spinersize</w>
+      <w>splitsizewithkama</w>
       <w>spltext</w>
       <w>strimage</w>
       <w>swch</w>
@@ -294,12 +336,16 @@
       <w>tablayout</w>
       <w>tablelegaue</w>
       <w>teaminfo</w>
+      <w>tedad</w>
+      <w>tedadkala</w>
       <w>textadminguestgols</w>
       <w>textadminhomegols</w>
       <w>textguesteamname</w>
       <w>texthometeamname</w>
       <w>textmessage</w>
+      <w>textsize</w>
       <w>textstatus</w>
+      <w>textviewspinesizeshape</w>
       <w>thiscontext</w>
       <w>threadapiconnectuser</w>
       <w>titr</w>
@@ -313,6 +359,7 @@
       <w>txtguestteamname</w>
       <w>txthometeamname</w>
       <w>txthometeamnamelenght</w>
+      <w>txtminez</w>
       <w>txtname</w>
       <w>txtnamegroup</w>
       <w>txtnamekala</w>

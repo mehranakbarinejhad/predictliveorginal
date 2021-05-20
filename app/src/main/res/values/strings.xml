@@ -80,7 +80,7 @@
     <string name="highprice">گرانترین</string>
     <string name="kafsh_juma">کفش ورزشی جوما</string>
     <string name="juma_n51">juma-n51</string>
-    <string name="price">T38,000,000</string>
+    <string name="price">380,000,000</string>
     <string name="toman">تومان</string>
     <string name="badansazi">بدنسازی</string>
     <string name="showall">نمایش همه</string>
@@ -102,6 +102,11 @@
     <string name="detailskala">مشخصات:</string>
     <string name="Add_basket_text">افزودن به سبد خرید</string>
     <string name="descriptions">توضیحات</string>
+    <string name="size_t">سایز</string>
+    <string name="large">خیلی بزرگ</string>
+    <string name="minez">-</string>
+    <string name="plus">+</string>
+    <string name="nobasket">سبد خرید خالی می باشد.</string>
 
     <string-array name="details">
         <item>جدیدترین</item>

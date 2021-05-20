@@ -10,15 +10,15 @@
     >
     <View
         android:id="@+id/view_imageshape"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:background="@drawable/viewimageshapegroupnotselected"
 
         />
     <ImageView
         android:id="@+id/img_group"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/hat"
@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/badansazi"
-        android:textSize="18sp"
+        android:textSize="19sp"
         android:textColor="#111"
         android:fontFamily="@font/bmitra"
         android:layout_below="@id/view_imageshape"

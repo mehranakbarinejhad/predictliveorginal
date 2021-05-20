@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.picasso.Picasso
+import ir.liyanamarket.predictlive.BasketActivity
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendGroupInterface
 import ir.liyanamarket.predictlive.`interface`.SendSelectKalaInterface
@@ -22,8 +23,11 @@ import ir.liyanamarket.predictlive.dataclass.Kala
 import ir.liyanamarket.predictlive.dataclass.SpinerList
 import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
+
 import kotlinx.android.synthetic.main.activity_shop.*
 import kotlinx.android.synthetic.main.toolbar_shop.*
+
+
 import org.koin.android.ext.android.inject
 
 import kotlin.collections.ArrayList
@@ -33,7 +37,7 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
     //region variable array list  send to searchactivity
    private var arraylist = ArrayList<Kala>()
 
-
+lateinit var username:String
     //endregion
     //region SpinerList Item
     private val listspiner = listOf(
@@ -52,15 +56,19 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
     private val picasso: Picasso by inject()
     //endregion
     //region onCreate Method
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop)
 
         //region set customtoolbar
+       // setSupportActionBar(m_toolbar_shop)
         setSupportActionBar(m_toolbar_shop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.title="فروشگاه"
+        username=intent.getStringExtra("username").toString()
+        kalaAdapter.username=username
         kalaAdapter.activity=this
 
 //endregion
@@ -86,6 +94,8 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
         presenterApiConnectGroup.sendGroupInterface = this
         presenterApiConnectGroup.getgroup()
         //endregion
+
+
 
     }
     //endregion
@@ -156,6 +166,12 @@ class ShopActivity : AppCompatActivity(), SendGroupInterface, SendSelectKalaInte
                 intent.putExtra("listf",arraylist)
                 startActivity(intent)
             }
+            R.id.mnu_show_basket ->{
+                val intent=Intent(applicationContext, BasketActivity::class.java)
+                intent.putExtra("username",username)
+                startActivity(intent)
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }

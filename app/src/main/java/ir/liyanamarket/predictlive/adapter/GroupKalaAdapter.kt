@@ -14,8 +14,11 @@ import ir.liyanamarket.predictlive.`interface`.SendSelectKalaInterface
 import ir.liyanamarket.predictlive.dataclass.GroupKala
 import ir.liyanamarket.predictlive.dataclass.Kala
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
+
+//import org.koin.core.KoinComponent
+//import org.koin.core.inject
 
 class GroupKalaAdapter:KoinComponent,RecyclerView.Adapter<GroupKalaAdapter.CustomViewHolder>(),SendSelectKalaInterface{
     private val picasso:Picasso by inject()

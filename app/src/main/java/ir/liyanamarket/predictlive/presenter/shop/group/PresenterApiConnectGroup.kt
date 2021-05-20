@@ -3,8 +3,8 @@ package ir.liyanamarket.predictlive.presenter.shop.group
 import ir.liyanamarket.predictlive.`interface`.SendGroupInterface
 import ir.liyanamarket.predictlive.dataclass.GroupKala
 import ir.liyanamarket.predictlive.model.shop.group.ApiConnectGroup
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

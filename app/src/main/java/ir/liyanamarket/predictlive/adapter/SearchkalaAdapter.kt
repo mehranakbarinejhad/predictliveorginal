@@ -13,8 +13,8 @@ import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.dataclass.Kala
 
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class SearchkalaAdapter(private val context:Context):RecyclerView.Adapter<SearchkalaAdapter.CustomViewHolder>(),KoinComponent {
     private val picasso:Picasso by inject()

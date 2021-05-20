@@ -3,8 +3,8 @@ package ir.liyanamarket.predictlive.presenter.changeprofile
 import ir.liyanamarket.predictlive.`interface`.SendChangeProfileInterface
 import ir.liyanamarket.predictlive.dataclass.ChangeProfile
 import ir.liyanamarket.predictlive.model.changeprofile.ApiConnectToChangeProfile
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

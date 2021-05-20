@@ -65,6 +65,8 @@ class FragmentHome : Fragment(), SendSelectRankingUser {
                 activity2.intent.getStringExtra("imageloginuser").toString()
             )
             intent.putExtra("nameuser", activity2.intent.getStringExtra("nameuser").toString())
+            intent.putExtra("username",activity2.intent.getStringExtra("usernameloginuser").toString())
+
             activity2.startActivity(intent)
         }
 

@@ -3,7 +3,7 @@ package ir.liyanamarket.predictlive.dataclass
 import java.io.Serializable
 
 data class Kala(
-    val id:Int,
+    val id:String,
     val titr:String,
     val name:String,
     val date:String,

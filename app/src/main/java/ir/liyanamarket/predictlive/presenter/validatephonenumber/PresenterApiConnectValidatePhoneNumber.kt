@@ -3,8 +3,8 @@ package ir.liyanamarket.predictlive.presenter.validatephonenumber
 import ir.liyanamarket.predictlive.`interface`.SendValidatePhoneNumberinterface
 import ir.liyanamarket.predictlive.dataclass.ValidatePhoneNumber
 import ir.liyanamarket.predictlive.model.validatephonenumber.ApiConnectValidatePhoneNumber
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

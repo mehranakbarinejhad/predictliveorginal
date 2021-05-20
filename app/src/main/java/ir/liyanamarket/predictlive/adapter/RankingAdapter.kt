@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.dataclass.Users
-import org.koin.core.KoinComponent
-import org.koin.core.get
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class RankingAdapter(val context: Context):RecyclerView.Adapter<RankingAdapter.Customviewholder>(),KoinComponent {
     lateinit var list:List<Users>

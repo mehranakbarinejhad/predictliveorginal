@@ -41,9 +41,12 @@ class PredictActivity : AppCompatActivity(),SendSelectPredictInterface,SendSelec
 
 
     override fun onsuccessPredict(list: List<Predict>) {
-        predictlist=list
-        presenterApiConnectSelectMatch.sendSelectMatchInterface=this
-       presenterApiConnectSelectMatch.getmatch("000128")
+        try {
+            predictlist = list
+            presenterApiConnectSelectMatch.sendSelectMatchInterface = this
+            presenterApiConnectSelectMatch.getmatch("000128")
+        }
+        catch (ex:Exception){}
     }
 
     override fun onerrorMatch(t: Throwable) {

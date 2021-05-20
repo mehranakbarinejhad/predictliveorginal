@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface ApiServicesChangeProfile {
     @FormUrlEncoded
-    @POST("Main.php")
+    @POST("Main2.php")
     fun change(
         @Field("action")action:String,
         @Field("strimage")strimage:String,

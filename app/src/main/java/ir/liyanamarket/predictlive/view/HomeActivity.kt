@@ -11,6 +11,8 @@ import ir.liyanamarket.predictlive.fragment.FragmentSetting
 import kotlinx.android.synthetic.main.activity_home.*
 import org.koin.android.ext.android.inject
 
+
+
 class HomeActivity : AppCompatActivity() {
     private var firstpresstime = 0L
     private val maxtime = 2000L

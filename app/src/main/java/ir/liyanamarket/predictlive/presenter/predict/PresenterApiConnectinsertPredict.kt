@@ -3,8 +3,8 @@ package ir.liyanamarket.predictlive.presenter.predict
 import ir.liyanamarket.predictlive.`interface`.SendinsertpredictInterface
 import ir.liyanamarket.predictlive.dataclass.ResultPredict
 import ir.liyanamarket.predictlive.model.predict.ApiConnectinsertPredict
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

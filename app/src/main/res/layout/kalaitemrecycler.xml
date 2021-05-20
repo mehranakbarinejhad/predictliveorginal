@@ -2,11 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="172dp"
-    android:layout_height="255dp"
+    android:layout_height="270dp"
     android:layout_gravity="center"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
-
     android:elevation="20dp"
     android:background="@drawable/shaperecyclerkalaitemgreen"
     android:id="@+id/recyclerkalaparent">
@@ -58,18 +57,31 @@
 
     <TextView
         android:id="@+id/txt_price"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:fontFamily="@font/gigi"
-        android:gravity="center"
+        android:layout_below="@id/img_kala"
+        android:fontFamily="@font/bmitrabold"
+        android:gravity="left"
         android:layout_alignParentRight="true"
         tools:text="@string/price"
-        android:textColor="#FFF"
-        android:layout_marginRight="5dp"
-        android:layout_toEndOf="@id/img_icon_next"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="1dp"
         android:paddingRight="4dp"
         android:textSize="20sp" />
+
+ <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_kala"
+        android:fontFamily="@font/bmitrabold"
+        android:gravity="center"
+        android:layout_toStartOf="@id/txt_price"
+        android:text="@string/toman"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp"
+        android:textSize="18sp" />
 
 
 

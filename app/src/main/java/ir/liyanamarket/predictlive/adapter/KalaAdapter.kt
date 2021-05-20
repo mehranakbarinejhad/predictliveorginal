@@ -13,10 +13,11 @@ import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.DetailsKalaActivity
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.dataclass.Kala
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class KalaAdapter( var context:Context) : RecyclerView.Adapter<KalaAdapter.Customviewholder>(),KoinComponent {
+    lateinit var username:String
     lateinit var activity:AppCompatActivity
     private val picasso:Picasso by inject()
     lateinit var list: MutableList<Kala>
@@ -56,12 +57,14 @@ class KalaAdapter( var context:Context) : RecyclerView.Adapter<KalaAdapter.Custo
         }
         holder.recyclerkalaparent.setOnClickListener {
             val intent=Intent(activity,DetailsKalaActivity::class.java)
+            intent.putExtra("codekala",list[position].id)
             intent.putExtra("image",list[position].image)
             intent.putExtra("price",list[position].price)
             intent.putExtra("titr",list[position].titr)
             intent.putExtra("details",list[position].details)
             intent.putExtra("description",list[position].description)
-
+            intent.putExtra("size",list[position].size)
+            intent.putExtra("username",username)
             activity.startActivity(intent)
         }
 

@@ -3,8 +3,8 @@ package ir.liyanamarket.predictlive.presenter.match
 import ir.liyanamarket.predictlive.`interface`.SendSelectMatchInterface
 import ir.liyanamarket.predictlive.dataclass.Match
 import ir.liyanamarket.predictlive.model.match.ApiConnectToSelectMatch
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
