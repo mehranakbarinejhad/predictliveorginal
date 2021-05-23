@@ -15,6 +15,8 @@ import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectDeleteBasket
 import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectEditTedadKala
 import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectInsertBasket
 import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectShowBasket
+import ir.liyanamarket.predictlive.model.shop.buy.ApiConnectInsertBuy
+import ir.liyanamarket.predictlive.model.shop.buy.ApiConnectLastCodesefaresh
 import ir.liyanamarket.predictlive.model.shop.group.ApiConnectGroup
 import ir.liyanamarket.predictlive.model.shop.kala.ApiConnectToSelectKala
 import ir.liyanamarket.predictlive.model.user.ApiConnectRankingUser
@@ -30,6 +32,8 @@ import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectDele
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectEDitTedadKala
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectInsertBasket
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectShowBasket
+import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectLastCodeSefaresh
+import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectinsertBuy
 import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectRankingUser
@@ -89,4 +93,10 @@ var appmadules= module {
     single { PresenterApiConnectEDitTedadKala() }
     single { ApiConnectDeleteBasket() }
     single{ PresenterApiConnectDeleteBasket()}
+    single { ApiConnectLastCodesefaresh() }
+    single { PresenterApiConnectLastCodeSefaresh() }
+    single { ApiConnectInsertBuy() }
+    single { PresenterApiConnectinsertBuy() }
+    single { CheckNetworkConnection(get())}
+
 }

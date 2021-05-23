@@ -107,6 +107,19 @@
     <string name="minez">-</string>
     <string name="plus">+</string>
     <string name="nobasket">سبد خرید خالی می باشد.</string>
+    <string name="completebye">تکمیل فرایند خرید</string>
+    <string name="pricebye">مبلغ قابل پرداخت:</string>
+    <string name="payment">پرداخت</string>
+    <string name="ostan">استان</string>
+    <string name="shahrestan">شهرستان</string>
+    <string name="completeAddress">آدرس کامل</string>
+    <string name="profilebuy">مشخصات خریدار</string>
+    <string name="sorathesab">صورتحساب</string>
+    <string name="typepayment">نحوه پرداخت </string>
+    <string name="portbank">درگاه بانکی( فعال نمی باشد)</string>
+    <string name="homepay">درب منزل</string>
+    <string name="nointernetconnection">به اینترنت متصل نیستید</string>
+    <string name="retryconnect">تلاش دوباره</string>
 
     <string-array name="details">
         <item>جدیدترین</item>

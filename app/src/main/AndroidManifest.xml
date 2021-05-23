@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ir.liyanamarket.predictlive">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,7 +15,9 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.PredictLive"
         tools:ignore="AllowBackup">
-        <activity android:name=".BasketActivity"></activity>
+        <activity android:name=".BuyActivity"
+            android:theme="@style/ShopStyle"/>
+        <activity android:name=".BasketActivity" />
         <activity
             android:name=".DetailsKalaActivity"
             android:theme="@style/detailsactivitystyle" />

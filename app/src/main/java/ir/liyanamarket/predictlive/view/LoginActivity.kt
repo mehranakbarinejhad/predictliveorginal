@@ -11,6 +11,7 @@ import ir.liyanamarket.predictlive.dataclass.Users
 import ir.liyanamarket.predictlive.fragment.FragmentProgressBar
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectRankingUser
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
+import ir.liyanamarket.predictlive.utils.CheckNetworkConnection
 import ir.liyanamarket.predictlive.utils.MyMessage
 import ir.liyanamarket.predictlive.utils.SaveLoginInfo
 import kotlinx.android.synthetic.main.activity_login.*
@@ -18,6 +19,8 @@ import org.koin.android.ext.android.inject
 
 
 class LoginActivity : AppCompatActivity(), SendUsersInterface {
+   // private val checkNetworkConnection:CheckNetworkConnection by inject()
+    private val presenterApiConnectUser: PresenterApiConnectUser by inject()
     private val fragmentProgress: FragmentProgressBar by inject()
     private val myMessage:MyMessage by inject()
     private val saveLoginInfo: SaveLoginInfo by inject()
@@ -25,7 +28,8 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        presenterApiConnectUser.sendUsersInterface = this
+  
         myMessage.activity=this
         //region get info login
         val logininfo = saveLoginInfo.load()
@@ -46,10 +50,10 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
                    myMessage.show("نام کاربری و رمز عبور را وارد نمایید.")
                 return@setOnClickListener
             }
-            fragmentProgress.show(supportFragmentManager, "progressbar")
-            val presenterApiConnectUser: PresenterApiConnectUser by inject()
+           fragmentProgress.show(supportFragmentManager, "progressbar")
+
             presenterApiConnectUser.getusers(edt_username.text.toString())
-            presenterApiConnectUser.sendUsersInterface = this
+
 
         }
         //endregion

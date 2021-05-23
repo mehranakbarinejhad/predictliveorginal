@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Liyan">
     <words>
+      <w>accessinternet</w>
       <w>addbuttonpredictshape</w>
       <w>addfragment</w>
       <w>addp</w>
@@ -11,6 +12,7 @@
       <w>airmax</w>
       <w>akbari</w>
       <w>andalus</w>
+      <w>apiconnectlastcodesefaresh</w>
       <w>apiconnectuser</w>
       <w>apiservice</w>
       <w>apiservices</w>
@@ -39,6 +41,7 @@
       <w>btnadd</w>
       <w>btnnamegroup</w>
       <w>btnok</w>
+      <w>buyactivity</w>
       <w>caht</w>
       <w>calista</w>
       <w>changeprofile</w>
@@ -48,9 +51,14 @@
       <w>changeprofileinfragment</w>
       <w>charsearch</w>
       <w>checkboxbackground</w>
+      <w>checkinputvalidate</w>
+      <w>checknetwork</w>
       <w>codeinterface</w>
       <w>codekala</w>
+      <w>codesefaresh</w>
       <w>companname</w>
+      <w>completeaddress</w>
+      <w>completebye</w>
       <w>confirmpasswordhangeprofile</w>
       <w>connectapi</w>
       <w>connectinsert</w>
@@ -60,6 +68,7 @@
       <w>createaccounttext</w>
       <w>customtoolbar</w>
       <w>customviewholder</w>
+      <w>datekharid</w>
       <w>decodeimage</w>
       <w>deletebasket</w>
       <w>descriptionkala</w>
@@ -78,6 +87,11 @@
       <w>edittext</w>
       <w>edittextuserguestteamgols</w>
       <w>edittextuserhometeamgols</w>
+      <w>edtaddresscomplete</w>
+      <w>edtname</w>
+      <w>edtostan</w>
+      <w>edtphonenumber</w>
+      <w>edtshahrestan</w>
       <w>edttextuserguestgols</w>
       <w>edttextuserhomegoals</w>
       <w>edtuserguestgols</w>
@@ -90,6 +104,7 @@
       <w>esteghlal</w>
       <w>filterlist</w>
       <w>filtertext</w>
+      <w>finalresut</w>
       <w>firstedttext</w>
       <w>firstlist</w>
       <w>firstpresstime</w>
@@ -123,6 +138,7 @@
       <w>headershop</w>
       <w>highprice</w>
       <w>homeintent</w>
+      <w>homepay</w>
       <w>hometab</w>
       <w>hometeam</w>
       <w>hometeamgols</w>
@@ -153,6 +169,8 @@
       <w>insertkalatobasket</w>
       <w>insertorupdatepredict</w>
       <w>insertpredict</w>
+      <w>inserttobuy</w>
+      <w>inserttoby</w>
       <w>insertuser</w>
       <w>intentlogin</w>
       <w>iranflag</w>
@@ -162,6 +180,7 @@
       <w>kafsh</w>
       <w>kalalist</w>
       <w>koin</w>
+      <w>lastcodesefaresh</w>
       <w>lastedttext</w>
       <w>legaue</w>
       <w>lenght</w>
@@ -196,6 +215,7 @@
       <w>minez</w>
       <w>minezkala</w>
       <w>miya</w>
+      <w>miyaneh</w>
       <w>mnuhome</w>
       <w>mnurank</w>
       <w>mnusetting</w>
@@ -206,31 +226,41 @@
       <w>myintent</w>
       <w>namegroup</w>
       <w>namekala</w>
+      <w>namekharidar</w>
       <w>namelogo</w>
       <w>nameuser</w>
+      <w>networkinfo</w>
       <w>nobasket</w>
+      <w>nointernetconnection</w>
       <w>numberfive</w>
       <w>numberfor</w>
       <w>numberinterface</w>
       <w>numberone</w>
       <w>numberthree</w>
       <w>numbertwo</w>
+      <w>oncreate</w>
       <w>oneranking</w>
       <w>onerror</w>
       <w>onerrorbasket</w>
       <w>onerrorgroup</w>
+      <w>onerrorinsertbuy</w>
+      <w>onerrorlastcode</w>
       <w>onerrorrankinguser</w>
       <w>onresume</w>
       <w>onsiccess</w>
       <w>onsuccess</w>
       <w>onsuccessgroup</w>
+      <w>onsuccesslastcode</w>
       <w>onsuccessrankinguser</w>
+      <w>onsuucessinsertbuy</w>
+      <w>ostan</w>
       <w>passwordhangeprofile</w>
       <w>passwordloginuser</w>
       <w>passwordshared</w>
       <w>phonenumberloginuser</w>
       <w>pluseminezlinear</w>
       <w>pluskala</w>
+      <w>portbank</w>
       <w>postaction</w>
       <w>postgroupkala</w>
       <w>predictedittextshape</w>
@@ -239,8 +269,11 @@
       <w>predictlive</w>
       <w>predictrecyclerlist</w>
       <w>predictrecyclershaper</w>
+      <w>presenterclass</w>
       <w>priceafteroff</w>
+      <w>pricebye</w>
       <w>pricekala</w>
+      <w>profilebuy</w>
       <w>profilenamechangeprofile</w>
       <w>profileshop</w>
       <w>rankinglistbackground</w>
@@ -264,8 +297,10 @@
       <w>resultlist</w>
       <w>resultnumber</w>
       <w>resultrecoveryactivity</w>
+      <w>retryconnect</w>
       <w>revovery</w>
       <w>rgisteractivity</w>
+      <w>rowindex</w>
       <w>scoreloginuser</w>
       <w>scoreshape</w>
       <w>scoretextviewshape</w>
@@ -281,9 +316,11 @@
       <w>sectiontableleague</w>
       <w>sectiontopscorelegaue</w>
       <w>sectionvideo</w>
+      <w>sefaresh</w>
       <w>selectgroupkala</w>
       <w>selectkala</w>
       <w>selectkalawithgroup</w>
+      <w>selectlast</w>
       <w>selectmatch</w>
       <w>selectpredict</w>
       <w>selectpredictbyuser</w>
@@ -298,13 +335,18 @@
       <w>sendinsert</w>
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
+      <w>sendsum</w>
+      <w>sendsumprice</w>
       <w>serachview</w>
       <w>serevices</w>
       <w>servicesend</w>
+      <w>servicesinsert</w>
       <w>setfocus</w>
       <w>setmargin</w>
+      <w>shahrestan</w>
       <w>shapebasketrecyclerparent</w>
       <w>shapebuttondetailsactivity</w>
+      <w>shapelinearbuyactivity</w>
       <w>shapelinearlayoutdescriptiondetails</w>
       <w>shapeprofilegradint</w>
       <w>shaperecyclerkalaitem</w>
@@ -317,10 +359,13 @@
       <w>showall</w>
       <w>showallbasket</w>
       <w>showbasket</w>
+      <w>showdialog</w>
+      <w>showdialoginternet</w>
       <w>simsun</w>
       <w>sizekala</w>
       <w>sizetext</w>
       <w>smscode</w>
+      <w>sorathesab</w>
       <w>spiner</w>
       <w>spinerbackground</w>
       <w>spineritem</w>
@@ -329,6 +374,8 @@
       <w>splitsizewithkama</w>
       <w>spltext</w>
       <w>strimage</w>
+      <w>sumpric</w>
+      <w>sumprice</w>
       <w>swch</w>
       <w>tabbutton</w>
       <w>tabbuttonbackgroundsekected</w>
@@ -369,6 +416,7 @@
       <w>txtstatus</w>
       <w>txttitr</w>
       <w>txttitrkala</w>
+      <w>typepayment</w>
       <w>userguestteamgol</w>
       <w>userhometeamgol</w>
       <w>usernamechangeprofile</w>
@@ -376,8 +424,10 @@
       <w>usernameshared</w>
       <w>usernameuser</w>
       <w>validateactivity</w>
+      <w>validateinputtext</w>
       <w>validatenumber</w>
       <w>validatephonenumber</w>
+      <w>vaziyat</w>
       <w>veiwscore</w>
       <w>viewguestshape</w>
       <w>viewhomeshape</w>

@@ -23,10 +23,10 @@ class FragmentMessage:DialogFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val textmessage:TextView=view!!.findViewById(R.id.txt_message)
+        val textmessage:TextView=requireView().findViewById(R.id.txt_message)
         textmessage.text=message
 
-        val btnok:Button=view!!.findViewById(R.id.btn_message_ok)
+        val btnok:Button=requireView().findViewById(R.id.btn_message_ok)
         btnok.setOnClickListener {
             dismiss()
         }
