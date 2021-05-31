@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PredictLive</string>
+    <string name="app_name">Sport predict </string>
     <string name="username">نام کاربری</string>
     <string name="password">رمز عبور</string>
     <string name="password2">رمز عبور:</string>
@@ -29,9 +29,9 @@
     <string name="mehran_akbari">Mehran Akbari</string>
     <string name="this_week">This Week</string>
     <string name="all_time">All Time</string>
-    <string name="shop">Shop</string>
-    <string name="ranking">Ranking</string>
-    <string name="setting">Setting</string>
+    <string name="shop">فروشگاه</string>
+    <string name="ranking">رتبه</string>
+    <string name="setting">تنظیمات</string>
     <string name="_5450">5450</string>
     <string name="score">امتیاز من</string>
     <string name="_23">23</string>
@@ -68,7 +68,7 @@
     <string name="_9184591468">9184591468</string>
     <string name="phonenumber2">شماره موبایل:</string>
     <string name="name2">نام پروفایل:</string>
-    <string name="changeprofile">تغییر پروفایل</string>
+    <string name="changeprofile">تغییر تصویر پروفایل</string>
     <string name="changeprofileimage">تغییر تصویر پروفایل</string>
     <string name="_5500">5500</string>
     <string name="_124">124</string>
@@ -91,7 +91,7 @@
     <string name="mybasket">سبد خرید</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="searchview">SearchView</string>
+    <string name="searchview">جستجو</string>
     <string name="show_drawer_layout">show drawer layout</string>
     <string name="fa_shop">فروشگاه</string>
     <string name="airmax_2010_iran">AirMax-2010-Iran</string>
@@ -120,6 +120,21 @@
     <string name="homepay">درب منزل</string>
     <string name="nointernetconnection">به اینترنت متصل نیستید</string>
     <string name="retryconnect">تلاش دوباره</string>
+    <string name="successbuytitr">سفارش شما با موفقیت ثبت شد</string>
+    <string name="codepeygiri">کد رهگیری:15421523231445</string>
+    <string name="firstandlastnamekharidar">نام و نام خانوادگی:</string>
+    <string name="datekharid">تاریخ:</string>
+    <string name="typepay">نوع پرداخت:</string>
+    <string name="datecurrent">1400/03/03</string>
+    <string name="comback">برگشت</string>
+    <string name="geran">گرانترین</string>
+    <string name="newss">جدیدترین</string>
+    <string name="arzan">ارزانترین</string>
+    <string name="titrnewstext">نفشه یونایتد نگرفت حوله دخیا معجزه نکرد</string>
+    <string name="newsdescripyiontext">از دست رفتن پنالتی داوید دخیا باعث شد ویارئال به قهرمانی لیگ اروپا برسد.</string>
+    <string name="newsdate">1400/03/05 17:00</string>
+    <string name="cristiano_ronalod">Cristiano Ronalod</string>
+    <string name="_29">29</string>
 
     <string-array name="details">
         <item>جدیدترین</item>

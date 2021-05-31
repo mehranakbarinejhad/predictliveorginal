@@ -3,6 +3,7 @@ package ir.liyanamarket.predictlive.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import ir.liyanamarket.predictlive.R
@@ -22,6 +23,8 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
         myMessage.activity=this
 
         setContentView(R.layout.activity_register)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
         val phonenumber=intent.getStringExtra("phonenumber").toString()
         edt_phonenumber_loginprofileactivity.setText(phonenumber)
         presenterApiConnectRegister.sendRegisterinterface=this
@@ -42,6 +45,8 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
         }
 
     override fun onsuccess(list: List<Register>) {
+        btn_register_loginprofileactivity.isEnabled=true
+
         when (list[0].result) {
             "success" -> {
                 val intent= Intent(applicationContext, SuccessRegisterActivityActivity::class.java)
@@ -56,7 +61,9 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
     }
 
     override fun onerror(t: Throwable) {
-        Toast.makeText(this,"Error",Toast.LENGTH_LONG).show()
+        btn_register_loginprofileactivity.isEnabled=true
+
+        myMessage.show("وضعیت اتصال به اینترنت را بررسی کنید ")
 
     }
 
@@ -71,6 +78,7 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
     ) {
         if (name.text.isNotEmpty() && username.text.isNotEmpty() && password.text.isNotEmpty() && confirm.text.isNotEmpty()) {
             if (password.text.toString() == confirm.text.toString()) {
+                btn_register_loginprofileactivity.isEnabled=false
                 presenterApiConnectRegister.register(name.text.toString(),username.text.toString(),password.text.toString(),phonenumber.text.toString())
 
             } else {
@@ -83,5 +91,10 @@ class RegisterActivity : AppCompatActivity(),SendRegisterinterface {
 
             myMessage.show("لطفا تمام ورودی ها را پر نمایید.")
         }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this,LoginActivity::class.java))
+        finish()
     }
 }

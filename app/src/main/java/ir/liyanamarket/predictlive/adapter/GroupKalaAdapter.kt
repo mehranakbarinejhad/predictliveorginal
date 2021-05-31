@@ -1,16 +1,16 @@
 package ir.liyanamarket.predictlive.adapter
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendSelectKalaInterface
+import ir.liyanamarket.predictlive.`interface`.sendgroupselected
 import ir.liyanamarket.predictlive.dataclass.GroupKala
 import ir.liyanamarket.predictlive.dataclass.Kala
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
@@ -20,19 +20,23 @@ import org.koin.core.component.inject
 //import org.koin.core.KoinComponent
 //import org.koin.core.inject
 
-class GroupKalaAdapter:KoinComponent,RecyclerView.Adapter<GroupKalaAdapter.CustomViewHolder>(),SendSelectKalaInterface{
+class GroupKalaAdapter():KoinComponent,RecyclerView.Adapter<GroupKalaAdapter.CustomViewHolder>(),SendSelectKalaInterface{
     private val picasso:Picasso by inject()
     lateinit var list:List<GroupKala>
     private var index:Int=0
     private val presenterApiConnectSelectKala: PresenterApiConnectSelectKala by inject()
     lateinit var recyclerView: RecyclerView
     private val kalaAdapter:KalaAdapter by inject()
+    lateinit var sort:String
+lateinit var sendgroupselected: sendgroupselected
 
 
     inner class CustomViewHolder(itemview:View):RecyclerView.ViewHolder(itemview){
        val txtnamegroup:TextView=itemview.findViewById(R.id.txt_namegroup)
         val viewimageshape:View=itemview.findViewById(R.id.view_imageshape)
         val imagegroup:ImageView=itemview.findViewById(R.id.img_group)
+        val groupparent:RelativeLayout=itemview.findViewById(R.id.groupkala_parent)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -51,19 +55,36 @@ val view=LayoutInflater.from(parent.context).inflate(R.layout.groupkalarecycleri
             {
                 groupkalaname="All"
             }
-            presenterApiConnectSelectKala.selectkala(groupkalaname)
+            presenterApiConnectSelectKala.selectkala(groupkalaname,sort)
+            println(groupkalaname+sort)
+            sendgroupselected.groupactive(groupkalaname)
           index=position
             notifyDataSetChanged()
         }
-        if(index==position)
+
+
+
+
+        when(list[position].id) {
+            "1" ->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemgreen)
+            "2"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemblue)
+            "3"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemorange)
+            "4"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemred)
+            "5"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemdark)
+            "6"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitembrown)
+            "7"->holder.viewimageshape.setBackgroundResource(R.drawable.shaperecyclerkalaitemblue)
+
+        }
+       if(index==position)
         {
-            holder.viewimageshape.setBackgroundResource(R.drawable.viewimageshapegroupbackground)
+            holder.groupparent.setBackgroundResource(R.drawable.viewimageshapegroupbackground)
         }
         else
         {
-            holder.viewimageshape.setBackgroundResource(R.drawable.viewimageshapegroupnotselected)
+            holder.groupparent.setBackgroundResource(R.drawable.shaperecyclerkalaitempink)
 
         }
+
 
     }
 
@@ -75,16 +96,12 @@ val view=LayoutInflater.from(parent.context).inflate(R.layout.groupkalarecycleri
         kalaAdapter.list = list
         recyclerView.apply {
             layoutManager =
-                LinearLayoutManager(context.applicationContext, LinearLayoutManager.HORIZONTAL, true)
+                GridLayoutManager(context.applicationContext,2, GridLayoutManager.VERTICAL, false)
             adapter = kalaAdapter
         }
     }
 
     override fun onerror(t: Throwable) {
     }
-
-
-
-
 
 }

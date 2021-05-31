@@ -3,6 +3,7 @@ package ir.liyanamarket.predictlive.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendValidatePhoneNumberinterface
 import ir.liyanamarket.predictlive.dataclass.ValidatePhoneNumber
@@ -18,26 +19,33 @@ class NumberActivity : AppCompatActivity(),SendValidatePhoneNumberinterface {
     private val myMessage: MyMessage by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+       window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
         setContentView(R.layout.activity_number)
         myMessage.activity=this
         checkValidateInputPhoneNumber.activity=this
         presenterApiConnectValidatePhoneNumber.sendValidatePhoneNumberinterface=this
         btn_next_numberactivity.setOnClickListener {
+            btn_next_numberactivity.isEnabled=false
             if (checkValidateInputPhoneNumber.validatenumber(edt_phonenumber_numberactivity.text.toString())) {
 
                 presenterApiConnectValidatePhoneNumber.getresult(edt_phonenumber_numberactivity.text.toString())
+            }
+            else
+            {
+                btn_next_numberactivity.isEnabled=true
             }
 
 
         }
 
         txt_loginclick_numberactivity.setOnClickListener {
-            finish()
+          gologinactivity()
         }
     }
 
     override fun onsuccess(list: List<ValidatePhoneNumber>) {
-
+        btn_next_numberactivity.isEnabled=true
         if(list[0].result){
             myMessage.show("این شماره تلفن قبلا ثبت نام کرده است")
         }
@@ -52,11 +60,18 @@ class NumberActivity : AppCompatActivity(),SendValidatePhoneNumberinterface {
     }
 
     override fun onerror(t: Throwable) {
+        btn_next_numberactivity.isEnabled=true
         myMessage.show("اتصال اینترنت را بررسی کنید ")
 
     }
 
     override fun onBackPressed() {
+        gologinactivity()
+    }
+
+
+    private fun gologinactivity(){
+        startActivity(Intent(this,LoginActivity::class.java))
         finish()
     }
 }

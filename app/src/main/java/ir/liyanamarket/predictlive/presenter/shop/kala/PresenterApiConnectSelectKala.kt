@@ -15,8 +15,8 @@ class PresenterApiConnectSelectKala(val context: Context) : KoinComponent,
     Callback<MutableList<Kala>> {
     private val apiConnectToSelectKala: ApiConnectToSelectKala by inject()
     lateinit var sendSelectKalaInterface: SendSelectKalaInterface
-    fun selectkala(group: String) {
-       apiConnectToSelectKala.select().selectKala("selectkalawithgroup", group).enqueue(this)
+    fun selectkala(group: String,sort:String) {
+       apiConnectToSelectKala.select().selectKala("selectkalawithgroup", group,sort).enqueue(this)
     }
 
     override fun onResponse(call: Call<MutableList<Kala>>, response: Response<MutableList<Kala>>) {

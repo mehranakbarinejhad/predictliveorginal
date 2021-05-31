@@ -2,16 +2,18 @@ package ir.liyanamarket.predictlive.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import ir.liyanamarket.predictlive.R
-import ir.liyanamarket.predictlive.`interface`.SendSelectRankingUser
+import ir.liyanamarket.predictlive.`interface`.SendSelectItem
 import ir.liyanamarket.predictlive.`interface`.SendUsersInterface
-import ir.liyanamarket.predictlive.dataclass.RankingUser
+import ir.liyanamarket.predictlive.dataclass.Item
 import ir.liyanamarket.predictlive.dataclass.Users
 import ir.liyanamarket.predictlive.fragment.FragmentProgressBar
-import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectRankingUser
+import ir.liyanamarket.predictlive.presenter.item.PresenterApiConnectSelectItem
 import ir.liyanamarket.predictlive.presenter.user.PresenterApiConnectUser
-import ir.liyanamarket.predictlive.utils.CheckNetworkConnection
 import ir.liyanamarket.predictlive.utils.MyMessage
 import ir.liyanamarket.predictlive.utils.SaveLoginInfo
 import kotlinx.android.synthetic.main.activity_login.*
@@ -19,19 +21,25 @@ import org.koin.android.ext.android.inject
 
 
 class LoginActivity : AppCompatActivity(), SendUsersInterface {
-   // private val checkNetworkConnection:CheckNetworkConnection by inject()
+
+    //region create class wth koin
     private val presenterApiConnectUser: PresenterApiConnectUser by inject()
-    private val fragmentProgress: FragmentProgressBar by inject()
+  //  private val fragmentProgress: FragmentProgressBar by inject()
     private val myMessage:MyMessage by inject()
     private val saveLoginInfo: SaveLoginInfo by inject()
+//endregion
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+
+        window.decorView.layoutDirection=View.LAYOUT_DIRECTION_LTR
+        //region set interface and variable public
         presenterApiConnectUser.sendUsersInterface = this
-  
         myMessage.activity=this
-        //region get info login
+        //endregion
+        //region check in remmember login info
         val logininfo = saveLoginInfo.load()
         val usernameshared = logininfo.first
         val passwordshared = logininfo.second
@@ -42,31 +50,34 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
             swch_remmemberme.isChecked = false
         }
         //endregion
-
-        //region Login button clicked
+        //region Login button clicked and check validate input text
         btn_login.setOnClickListener {
-            if (edt_username.text.toString().isEmpty() || edt_password.text.toString().isEmpty()) {
+            btn_login.isEnabled=false
 
+            btn_login.startAnimation(AnimationUtils.loadAnimation
+                (this,R.anim.buttonanimation))
+            if (edt_username.text.toString().isEmpty() || edt_password.text.toString().isEmpty()) {
                    myMessage.show("نام کاربری و رمز عبور را وارد نمایید.")
+                btn_login.isEnabled=true
+                btn_login.clearAnimation()
                 return@setOnClickListener
             }
-           fragmentProgress.show(supportFragmentManager, "progressbar")
-
+          // fragmentProgress.show(supportFragmentManager, "progressbar")
             presenterApiConnectUser.getusers(edt_username.text.toString())
-
-
         }
         //endregion
         //region Text Recovery Click
         txt_revovery.setOnClickListener {
            val intent = Intent(applicationContext, RecoveryActivity::class.java)
             startActivity(intent)
+            finish()
         }
         //endregion
         //region text register click
             txt_createaccountclick.setOnClickListener {
                 val intent=Intent(applicationContext,NumberActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         //endregion
     }
@@ -74,7 +85,8 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
 
     // region callback On Success Data
     override fun onsuccess(list: List<Users>) {
-        fragmentProgress.dismiss()
+
+
         if (list.count() != 0) {
             if (edt_password.text.toString() == list[0].password) {
                 if (swch_remmemberme.isChecked) {
@@ -87,8 +99,8 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
                 startActivity(intentlogin)
                 finish()
 
-            } else {
 
+            } else {
                 myMessage.show("رمز عبور اشتباه می باشد.")
 
             }
@@ -97,13 +109,18 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
             myMessage.show( "نام کاربری اشتباه می باشد.")
 
         }
+
+        btn_login.isEnabled=true
+        btn_login.clearAnimation()
+
     }
     //endregion
 
 
     //region Callback On error data
     override fun onerror(t: Throwable) {
-        fragmentProgress.dismiss()
+        btn_login.clearAnimation()
+        btn_login.isEnabled=true
         myMessage.show("لطفا وضعیت اینترنت را بررسی نمایید." )
 
     }
@@ -122,6 +139,8 @@ class LoginActivity : AppCompatActivity(), SendUsersInterface {
 
 
     }
+
+
 
 
     //endregion

@@ -2,11 +2,16 @@ package ir.liyanamarket.predictlive
 
 
 import com.squareup.picasso.Picasso
-import ir.liyanamarket.predictlive.`interface`.ApiServicesEditTedadKala
 import ir.liyanamarket.predictlive.adapter.*
+import ir.liyanamarket.predictlive.adapter.topscore.ShowLeagueAdapter
+import ir.liyanamarket.predictlive.adapter.topscore.TopScoreAdapter
 import ir.liyanamarket.predictlive.fragment.*
 import ir.liyanamarket.predictlive.model.changeprofile.ApiConnectToChangeProfile
+import ir.liyanamarket.predictlive.model.footballapi.league.ApiConnectSelectLeague
+import ir.liyanamarket.predictlive.model.footballapi.topscores.ApiConnectSelectTopScores
+import ir.liyanamarket.predictlive.model.item.ApiConnectItem
 import ir.liyanamarket.predictlive.model.match.ApiConnectToSelectMatch
+import ir.liyanamarket.predictlive.model.news.ApiConnectSelectNews
 import ir.liyanamarket.predictlive.model.predict.ApiConnectSelectPredict
 import ir.liyanamarket.predictlive.model.predict.ApiConnectinsertPredict
 import ir.liyanamarket.predictlive.model.register.ApiConnectRegister
@@ -17,13 +22,18 @@ import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectInsertBasket
 import ir.liyanamarket.predictlive.model.shop.basket.ApiConnectShowBasket
 import ir.liyanamarket.predictlive.model.shop.buy.ApiConnectInsertBuy
 import ir.liyanamarket.predictlive.model.shop.buy.ApiConnectLastCodesefaresh
+import ir.liyanamarket.predictlive.model.shop.buy.ApiConnectSelectBuy
 import ir.liyanamarket.predictlive.model.shop.group.ApiConnectGroup
 import ir.liyanamarket.predictlive.model.shop.kala.ApiConnectToSelectKala
 import ir.liyanamarket.predictlive.model.user.ApiConnectRankingUser
 import ir.liyanamarket.predictlive.model.user.ApiConnectUsers
 import ir.liyanamarket.predictlive.model.validatephonenumber.ApiConnectValidatePhoneNumber
 import ir.liyanamarket.predictlive.presenter.changeprofile.PresenterApiconnectChangeProfile
+import ir.liyanamarket.predictlive.presenter.footballapi.league.PresenterApiConnectSelectLeague
+import ir.liyanamarket.predictlive.presenter.footballapi.topscores.PresenterApiConnectSelectTopScores
+import ir.liyanamarket.predictlive.presenter.item.PresenterApiConnectSelectItem
 import ir.liyanamarket.predictlive.presenter.match.PresenterApiConnectSelectMatch
+import ir.liyanamarket.predictlive.presenter.news.PresenterApiConnectSelectNews
 import ir.liyanamarket.predictlive.presenter.predict.PresenterApiConnectSelectPredict
 import ir.liyanamarket.predictlive.presenter.predict.PresenterApiConnectinsertPredict
 import ir.liyanamarket.predictlive.presenter.register.PresenterApiConnectRegister
@@ -33,6 +43,7 @@ import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectEDit
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectInsertBasket
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectShowBasket
 import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectLastCodeSefaresh
+import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectSelectBuy
 import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectinsertBuy
 import ir.liyanamarket.predictlive.presenter.shop.group.PresenterApiConnectGroup
 import ir.liyanamarket.predictlive.presenter.shop.kala.PresenterApiConnectSelectKala
@@ -98,5 +109,18 @@ var appmadules= module {
     single { ApiConnectInsertBuy() }
     single { PresenterApiConnectinsertBuy() }
     single { CheckNetworkConnection(get())}
-
+    single { ApiConnectSelectBuy() }
+    single { PresenterApiConnectSelectBuy() }
+    single { ApiConnectSelectNews() }
+    single { PresenterApiConnectSelectNews() }
+    single { NewsAdapter(get()) }
+    single { ApiConnectSelectTopScores() }
+    single { PresenterApiConnectSelectTopScores() }
+    single { TopScoreAdapter() }
+    single { ApiConnectSelectLeague() }
+    single { PresenterApiConnectSelectLeague() }
+    single { ShowLeagueAdapter(get()) }
+    single { ApiConnectItem() }
+    single { PresenterApiConnectSelectItem() }
+    single { ItemAdapter() }
 }

@@ -9,17 +9,25 @@
     <application
         android:name=".view.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="false"
+        android:supportsRtl="true"
         android:theme="@style/Theme.PredictLive"
         tools:ignore="AllowBackup">
-        <activity android:name=".BuyActivity"
-            android:theme="@style/ShopStyle"/>
-        <activity android:name=".BasketActivity" />
+        <activity android:name=".TopScoresActivity"></activity>
+        <activity android:name=".TopScorePlayerActivity" />
+        <activity android:name=".CompleteNewsActivity" />
+        <activity android:name=".NewsActivity" />
         <activity
-            android:name=".DetailsKalaActivity"
+            android:name=".view.BuySuccessActivity"
+            android:theme="@style/successbuyactivity" />
+        <activity
+            android:name=".view.BuyActivity"
+            android:theme="@style/ShopStyle" />
+        <activity android:name=".view.BasketActivity" />
+        <activity
+            android:name=".view.DetailsKalaActivity"
             android:theme="@style/detailsactivitystyle" />
         <activity android:name=".view.ResultRecoveryActivity" />
         <activity android:name=".view.ValidateCodeRecoveryActivity" />

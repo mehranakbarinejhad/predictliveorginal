@@ -7,37 +7,14 @@
     android:background="@drawable/logingradint"
 
     tools:context=".view.SuccessRegisterActivityActivity">
-    <View
+    <ImageView
         android:id="@+id/Viewlogo_successactivity"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@drawable/loginlogo"
+        android:background="@drawable/armlogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#C6CBD4"
-        android:text="@string/l"
-        android:layout_alignBottom="@+id/Viewlogo_successactivity"
-        android:fontFamily="@font/simsun"
-        android:layout_marginBottom="35sp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="90sp"
-        android:layout_centerHorizontal="true"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/live_predict"
-        android:textSize="22sp"
-        android:fontFamily="@font/andalus"
-        android:layout_marginTop="2dp"
-        android:layout_gravity="center_horizontal|center_vertical"
-        android:textColor="#C6CBD4"
-        android:layout_below="@id/Viewlogo_successactivity"
-        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/todo"
         />
 
     <TextView

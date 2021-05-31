@@ -1,6 +1,7 @@
 package ir.liyanamarket.predictlive.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import ir.liyanamarket.predictlive.R
@@ -21,6 +22,8 @@ class SearchActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
         searchview_kala.requestFocus()
         searchview_kala.onActionViewExpanded()
 

@@ -11,35 +11,16 @@
     tools:context=".view.NumberActivity"
     android:layout_marginTop="-75dp"
     >
-    <View
+    <ImageView
         android:id="@+id/logo_validateactivity"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:background="@drawable/loginlogo"
+        android:background="@drawable/armlogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="95dp"
+        android:contentDescription="@string/todo"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#FFF"
-        android:text="@string/l"
-        android:fontFamily="@font/simsun"
-        android:layout_marginTop="115sp"
-        android:layout_centerHorizontal="true"
-        android:textSize="90sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/live_predict"
-        android:textSize="22sp"
-        android:fontFamily="@font/andalus"
-        android:layout_marginTop="2dp"
-        android:layout_below="@id/logo_validateactivity"
-        android:layout_centerHorizontal="true"
 
-        android:textColor="#C6CBD4"/>
 
     <ImageView
         android:id="@+id/img_flag"

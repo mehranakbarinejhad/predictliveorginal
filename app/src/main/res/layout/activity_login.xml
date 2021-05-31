@@ -1,43 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.LoginActivity"
     android:id="@+id/loginactivity_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/logingradint"
-    android:layout_marginTop="-135dp"
-    >
-    <View
+    android:layout_marginTop="-135dp">
+
+    <ImageView
         android:id="@+id/logo_validateactivity"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:background="@drawable/loginlogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/todo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="155dp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#FFF"
-        android:text="@string/l"
-        android:fontFamily="@font/simsun"
-        android:layout_marginTop="170sp"
-        android:layout_centerHorizontal="true"
-        android:textSize="90sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/live_predict"
-        android:textSize="22sp"
-        android:fontFamily="@font/andalus"
-        android:layout_marginTop="2dp"
-        android:layout_below="@id/logo_validateactivity"
-        android:layout_centerHorizontal="true"
-        android:textColor="#C6CBD4"/>
+        android:src="@drawable/armlogo"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/edt_username"

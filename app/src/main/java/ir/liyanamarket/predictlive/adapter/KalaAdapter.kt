@@ -10,7 +10,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import ir.liyanamarket.predictlive.DetailsKalaActivity
+import ir.liyanamarket.predictlive.view.DetailsKalaActivity
 import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.dataclass.Kala
 import org.koin.core.component.KoinComponent
@@ -56,7 +56,7 @@ class KalaAdapter( var context:Context) : RecyclerView.Adapter<KalaAdapter.Custo
 
         }
         holder.recyclerkalaparent.setOnClickListener {
-            val intent=Intent(activity,DetailsKalaActivity::class.java)
+            val intent=Intent(activity, DetailsKalaActivity::class.java)
             intent.putExtra("codekala",list[position].id)
             intent.putExtra("image",list[position].image)
             intent.putExtra("price",list[position].price)

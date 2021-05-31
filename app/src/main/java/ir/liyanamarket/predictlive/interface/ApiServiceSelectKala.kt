@@ -9,7 +9,8 @@ interface ApiServiceSelectKala {
     @POST("Main.php")
    fun selectKala(
        @Field("action")action:String,
-        @Field("groupkala")group:String
+        @Field("groupkala")group:String,
+       @Field("sort")sort:String
    ):Call<MutableList<Kala>>
 
 }

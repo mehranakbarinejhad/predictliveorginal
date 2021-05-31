@@ -1,4 +1,4 @@
-package ir.liyanamarket.predictlive
+package ir.liyanamarket.predictlive.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,17 +7,15 @@ import android.view.View
 
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import ir.liyanamarket.predictlive.`interface`.SendLastCodeSefaresh
+import ir.liyanamarket.predictlive.R
 
 import ir.liyanamarket.predictlive.`interface`.SendShowBasket
 import ir.liyanamarket.predictlive.`interface`.Sendsumprice
 import ir.liyanamarket.predictlive.adapter.ShowBasketAdapter
-import ir.liyanamarket.predictlive.dataclass.ResultCodeSefaresh
 
 import ir.liyanamarket.predictlive.dataclass.ShowBasket
 
 import ir.liyanamarket.predictlive.presenter.shop.basket.PresenterApiConnectShowBasket
-import ir.liyanamarket.predictlive.presenter.shop.buy.PresenterApiConnectLastCodeSefaresh
 import kotlinx.android.synthetic.main.activity_basket.*
 import org.koin.android.ext.android.inject
 import java.text.DecimalFormat
@@ -30,6 +28,8 @@ class BasketActivity : AppCompatActivity(), SendShowBasket,Sendsumprice {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basket)
+        window.decorView.layoutDirection=View.LAYOUT_DIRECTION_LTR
+
         setSupportActionBar(toolbar_basketactivity)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)
@@ -41,7 +41,7 @@ class BasketActivity : AppCompatActivity(), SendShowBasket,Sendsumprice {
 
 
 btn_complete_basketactivity.setOnClickListener {
-    val intent=Intent(applicationContext,BuyActivity::class.java)
+    val intent=Intent(applicationContext, BuyActivity::class.java)
     intent.putExtra("username",username)
     finish()
     startActivity(intent)

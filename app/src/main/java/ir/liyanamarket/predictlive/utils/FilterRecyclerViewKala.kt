@@ -10,7 +10,9 @@ class FilterRecyclerViewKala {
         {
            displaylist.clear()
             arraylist.forEach {
-                if(it.titr.contains(filtertext))
+                val completekalaname=it.titr+" "+it.name
+
+                if(completekalaname.contains(filtertext))
 
                 {
                     displaylist.add(it)

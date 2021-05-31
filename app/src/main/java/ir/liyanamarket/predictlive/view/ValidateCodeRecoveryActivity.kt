@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
@@ -12,6 +13,7 @@ import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendSmsCodeinterface
 import ir.liyanamarket.predictlive.dataclass.SmsCode
 import ir.liyanamarket.predictlive.presenter.sendcode.PresenterApiConnectSendCode
+import ir.liyanamarket.predictlive.utils.CheckNetworkConnection
 import ir.liyanamarket.predictlive.utils.MyMessage
 import kotlinx.android.synthetic.main.activity_validate_code_recovery.*
 import org.koin.android.ext.android.inject
@@ -21,6 +23,7 @@ class ValidateCodeRecoveryActivity : AppCompatActivity(), SendSmsCodeinterface {
     private lateinit var smscode:String
     lateinit var phonenumber:String
     private val myMessage: MyMessage by inject()
+    private val checkNetworkConnection:CheckNetworkConnection by inject()
     //regioncounddowntimer
 private lateinit var countDownTimer:CountDownTimer
     val start=120000L
@@ -30,6 +33,8 @@ private lateinit var countDownTimer:CountDownTimer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_validate_code_recovery)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+checkNetworkConnection.activity=this
         myMessage.activity=this
         phonenumber=intent.getStringExtra("phonenumber").toString()
         txt_entercodetext_recoveryactivity.text=" ما یک کد به شماره  $phonenumber ,ارسال کردیم!لطفا آن را وارد کنید . "
@@ -71,10 +76,12 @@ private lateinit var countDownTimer:CountDownTimer
         btn_next_code_recoveryactivity.setOnClickListener {
             val enteringtext=textCode(edt_numberone_recoveryactivity,edt_numbertwo_recoveryactivity,edt_numberthree_recoveryactivity,edt_numberfor_recoveryactivity,edt_numberfive_recoveryactivity)
             if(enteringtext==smscode) {
-                val intent= Intent(this, ResultRecoveryActivity::class.java)
-                intent.putExtra("phonenumber",phonenumber)
-                startActivity(intent)
-                 finish()
+                if(checkNetworkConnection.internetStatus()) {
+                    val intent = Intent(this, ResultRecoveryActivity::class.java)
+                    intent.putExtra("phonenumber", phonenumber)
+                    startActivity(intent)
+                    finish()
+                }
 
 
 
@@ -112,5 +119,10 @@ private lateinit var countDownTimer:CountDownTimer
             lastedttext.requestFocus()
 
         }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this,LoginActivity::class.java))
+        finish()
     }
 }

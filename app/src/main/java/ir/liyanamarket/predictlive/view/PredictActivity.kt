@@ -2,6 +2,7 @@ package ir.liyanamarket.predictlive.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import ir.liyanamarket.predictlive.R
@@ -21,13 +22,16 @@ class PredictActivity : AppCompatActivity(),SendSelectPredictInterface,SendSelec
     private val presenterApiConnectSelectPredict:PresenterApiConnectSelectPredict by inject()
     private val presenterApiConnectSelectMatch:PresenterApiConnectSelectMatch by inject()
     private val predictAdapter:PredictAdapter by inject()
-    private var username=""
+   lateinit var username: String
     var predictlist= listOf<Predict>( )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_predict)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
         username=intent.getStringExtra("usernameuser").toString()
+predictAdapter.username=username
+        predictAdapter.sendinsertpredictInterface=this
 
         presenterApiConnectSelectPredict.sendSelectPredictInterface=this
             presenterApiConnectSelectPredict.selectPredict(username)
@@ -58,8 +62,7 @@ class PredictActivity : AppCompatActivity(),SendSelectPredictInterface,SendSelec
 
         predictAdapter.predictlist=predictlist
         predictAdapter.listmatch=list
-        predictAdapter.sendinsertpredictInterface=this
-        predictAdapter.username=username
+
         Recycler_MatchList.apply {
             layoutManager=LinearLayoutManager(this@PredictActivity,LinearLayoutManager.VERTICAL,false)
             adapter=predictAdapter

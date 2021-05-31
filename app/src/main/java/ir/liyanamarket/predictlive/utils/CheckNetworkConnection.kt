@@ -14,23 +14,23 @@ import org.koin.core.component.inject
 class CheckNetworkConnection(var context:Context):KoinComponent,SendGroupInterface {
     lateinit var activity:AppCompatActivity
 private val presenterApiConnectGroup:PresenterApiConnectGroup by inject()
-    private val fragmentProgressBar=FragmentProgressBar()
+   // private val fragmentProgressBar=FragmentProgressBar()
 private var resultInternet=false
     private var finalresut=false
 
     fun internetStatus():Boolean {
 
-      fragmentProgressBar.show(activity.supportFragmentManager,"show")
+   //   fragmentProgressBar.show(activity.supportFragmentManager,"show")
         if(accessinternet())
         {
             finalresut=true
-       fragmentProgressBar.dismiss()
+    //   fragmentProgressBar.dismiss()
 
         }
         else
         {
             finalresut=false
-           fragmentProgressBar.dismiss()
+          // fragmentProgressBar.dismiss()
             val builder=AlertDialog.Builder(activity)
             builder.setTitle("خطا در اتصال به اینترنت")
             builder.setMessage("لطفا وضعیت اینترنت را بررسی نمایید")

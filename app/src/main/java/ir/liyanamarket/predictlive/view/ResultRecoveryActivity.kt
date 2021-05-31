@@ -1,7 +1,9 @@
 package ir.liyanamarket.predictlive.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.squareup.picasso.Picasso
 import ir.liyanamarket.predictlive.R
@@ -20,8 +22,11 @@ class ResultRecoveryActivity : AppCompatActivity(),SendUsersInterface {
         presenterApiConnectUser.sendUsersInterface=this
         val number=intent.getStringExtra("phonenumber").toString()
         presenterApiConnectUser.getusersbynumber(number)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
 
         btn_login_resultrecoveryactivity.setOnClickListener {
+            startActivity(Intent(applicationContext,LoginActivity::class.java))
             finish()
         }
     }
@@ -38,6 +43,7 @@ class ResultRecoveryActivity : AppCompatActivity(),SendUsersInterface {
     }
 
     override fun onBackPressed() {
+        startActivity(Intent(applicationContext,LoginActivity::class.java))
         finish()
     }
 }

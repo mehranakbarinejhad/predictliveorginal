@@ -23,7 +23,6 @@ class PredictAdapter(private val context: Context) :
     lateinit var predictlist: List<Predict>
     lateinit var sendinsertpredictInterface: SendinsertpredictInterface
     lateinit var username: String
-    var matchid:Int?=null
     private val picasso: Picasso by inject()
     private val presenterApiConnectinsertPredict:PresenterApiConnectinsertPredict by inject()
 
@@ -48,7 +47,7 @@ class PredictAdapter(private val context: Context) :
 
     override fun onBindViewHolder(holder: Customviewholder, position: Int) {
         if (predictlist.count() == 0) {
-            predictlist = listOf(Predict("mehran", 0, 0, 0, ""))
+            predictlist = listOf(Predict("", 0, 0, 0, ""))
         }
 
         //region Match To recycler
@@ -80,7 +79,7 @@ class PredictAdapter(private val context: Context) :
             holder.btnadd,
             holder.edittextuserhometeamgols,
             holder.edittextuserguestteamgols,
-            predictlist[0].username, position
+            username, position
         )
         //endregion
 
@@ -215,6 +214,16 @@ class PredictAdapter(private val context: Context) :
         position: Int,
     ) {
 
+
+        if(btnok.text=="ویرایش"){
+            edttextuserhomegoals.isEnabled = false
+            edttextuserguestgols.isEnabled = false
+        }
+        else if(btnok.text=="ثبت"){
+            edttextuserhomegoals.isEnabled = true
+            edttextuserguestgols.isEnabled = true
+        }
+
         btnok.setOnClickListener {
             if (btnok.text == "ویرایش") {
                 btnok.isEnabled = true
@@ -226,8 +235,8 @@ class PredictAdapter(private val context: Context) :
                 if (edttextuserhomegoals.text.isNotEmpty() && edttextuserguestgols.text.isNotEmpty()) {
                     btnok.isEnabled = true
                     btnok.text = "ویرایش"
-                   // edttextuserhomegoals.isEnabled = false
-                   // edttextuserguestgols.isEnabled = false
+                    edttextuserhomegoals.isEnabled = false
+                    edttextuserguestgols.isEnabled = false
                     btnok.setBackgroundResource(R.drawable.editbuttnpredictshape)
                     presenterApiConnectinsertPredict.sendinsertpredictInterface=sendinsertpredictInterface
                     presenterApiConnectinsertPredict.insertpredict(username,listmatch[position].matchid.toString().toInt(),edttextuserhomegoals.text.toString().toInt(),edttextuserguestgols.text.toString().toInt())

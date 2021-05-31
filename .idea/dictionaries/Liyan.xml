@@ -2,6 +2,9 @@
   <dictionary name="Liyan">
     <words>
       <w>accessinternet</w>
+      <w>activebutton</w>
+      <w>activityclass</w>
+      <w>activityshopcontent</w>
       <w>addbuttonpredictshape</w>
       <w>addfragment</w>
       <w>addp</w>
@@ -16,11 +19,16 @@
       <w>apiconnectuser</w>
       <w>apiservice</w>
       <w>apiservices</w>
+      <w>applicationbackground</w>
       <w>applubuttoncommand</w>
       <w>applymatchtorecycler</w>
       <w>applyuserpredicttorecycler</w>
       <w>appmadules</w>
+      <w>armlogo</w>
       <w>arraylist</w>
+      <w>arraylistnews</w>
+      <w>arzan</w>
+      <w>arzantarin</w>
       <w>backentery</w>
       <w>backgroundparen</w>
       <w>backgroundrecycleritemsearchactivity</w>
@@ -36,6 +44,7 @@
       <w>bottombackgrounddetailsactivity</w>
       <w>bottomnav</w>
       <w>bottomnavigationbackground</w>
+      <w>bottomnavigationhomeactivity</w>
       <w>bottomnavigationstyle</w>
       <w>bottomnavigationview</w>
       <w>btnadd</w>
@@ -53,21 +62,31 @@
       <w>checkboxbackground</w>
       <w>checkinputvalidate</w>
       <w>checknetwork</w>
+      <w>closedrawer</w>
       <w>codeinterface</w>
       <w>codekala</w>
+      <w>codeleague</w>
+      <w>codepeygiri</w>
       <w>codesefaresh</w>
+      <w>comback</w>
       <w>companname</w>
       <w>completeaddress</w>
       <w>completebye</w>
+      <w>completekalaname</w>
+      <w>completename</w>
+      <w>completenews</w>
+      <w>completenewsactivity</w>
       <w>confirmpasswordhangeprofile</w>
       <w>connectapi</w>
       <w>connectinsert</w>
+      <w>countlist</w>
       <w>countrycode</w>
       <w>countryimage</w>
       <w>createaccountclick</w>
       <w>createaccounttext</w>
       <w>customtoolbar</w>
       <w>customviewholder</w>
+      <w>datecurrent</w>
       <w>datekharid</w>
       <w>decodeimage</w>
       <w>deletebasket</w>
@@ -99,12 +118,14 @@
       <w>edtuserhomegoals</w>
       <w>edtuserhometeamgols</w>
       <w>encodeimage</w>
+      <w>endinsert</w>
       <w>entercodetext</w>
       <w>enteringtext</w>
       <w>esteghlal</w>
       <w>filterlist</w>
       <w>filtertext</w>
       <w>finalresut</w>
+      <w>firstandlastnamekharidar</w>
       <w>firstedttext</w>
       <w>firstlist</w>
       <w>firstpresstime</w>
@@ -117,6 +138,8 @@
       <w>fragmentranking</w>
       <w>framrankandscore</w>
       <w>frghome</w>
+      <w>geran</w>
+      <w>gerantarin</w>
       <w>getcode</w>
       <w>getdata</w>
       <w>getdatabynumber</w>
@@ -125,11 +148,15 @@
       <w>getranking</w>
       <w>getresult</w>
       <w>getusersbynumber</w>
+      <w>gotoactivity</w>
       <w>gradintimagedetailsactivity</w>
       <w>gradintpredictlistitem</w>
       <w>gradintscoreandrank</w>
+      <w>groupactive</w>
       <w>groupkala</w>
+      <w>groupkalaparent</w>
       <w>groupname</w>
+      <w>groupparent</w>
       <w>guesteamgols</w>
       <w>guestteam</w>
       <w>guestteamgols</w>
@@ -137,6 +164,7 @@
       <w>havaeiaraq</w>
       <w>headershop</w>
       <w>highprice</w>
+      <w>homeactivity</w>
       <w>homeintent</w>
       <w>homepay</w>
       <w>hometab</w>
@@ -159,10 +187,13 @@
       <w>imageprofileheader</w>
       <w>imageshape</w>
       <w>imagespineritem</w>
+      <w>imagetitr</w>
       <w>imagetobyte</w>
       <w>imageurl</w>
+      <w>imageuser</w>
       <w>imageview</w>
       <w>imgkala</w>
+      <w>imgplayer</w>
       <w>indexsize</w>
       <w>inputtext</w>
       <w>insertbasket</w>
@@ -174,20 +205,26 @@
       <w>insertuser</w>
       <w>intentlogin</w>
       <w>iranflag</w>
+      <w>itemimage</w>
       <w>itemmenu</w>
+      <w>itemname</w>
       <w>itemview</w>
+      <w>jadidtarin</w>
       <w>juma</w>
       <w>kafsh</w>
       <w>kalalist</w>
       <w>koin</w>
       <w>lastcodesefaresh</w>
       <w>lastedttext</w>
+      <w>layouttxtusername</w>
       <w>legaue</w>
       <w>lenght</w>
       <w>linearoneranking</w>
       <w>linearparent</w>
       <w>linearscoreranking</w>
       <w>linesearchactivity</w>
+      <w>listbasket</w>
+      <w>listbuy</w>
       <w>listf</w>
       <w>listkala</w>
       <w>listmatch</w>
@@ -230,6 +267,15 @@
       <w>namelogo</w>
       <w>nameuser</w>
       <w>networkinfo</w>
+      <w>newsactivity</w>
+      <w>newsdate</w>
+      <w>newsdescription</w>
+      <w>newsdescripyiontext</w>
+      <w>newsimage</w>
+      <w>newss</w>
+      <w>newstext</w>
+      <w>newstitr</w>
+      <w>newstitrimage</w>
       <w>nobasket</w>
       <w>nointernetconnection</w>
       <w>numberfive</w>
@@ -242,6 +288,7 @@
       <w>oneranking</w>
       <w>onerror</w>
       <w>onerrorbasket</w>
+      <w>onerrorbuylist</w>
       <w>onerrorgroup</w>
       <w>onerrorinsertbuy</w>
       <w>onerrorlastcode</w>
@@ -249,20 +296,27 @@
       <w>onresume</w>
       <w>onsiccess</w>
       <w>onsuccess</w>
+      <w>onsuccessbylist</w>
       <w>onsuccessgroup</w>
       <w>onsuccesslastcode</w>
       <w>onsuccessrankinguser</w>
       <w>onsuucessinsertbuy</w>
       <w>ostan</w>
+      <w>parentitem</w>
+      <w>parentnews</w>
+      <w>parentnewsrecycleritem</w>
       <w>passwordhangeprofile</w>
       <w>passwordloginuser</w>
       <w>passwordshared</w>
+      <w>peygiri</w>
       <w>phonenumberloginuser</w>
+      <w>phonenumberloginuserlo</w>
       <w>pluseminezlinear</w>
       <w>pluskala</w>
       <w>portbank</w>
       <w>postaction</w>
       <w>postgroupkala</w>
+      <w>predictactivitybackgroundshape</w>
       <w>predictedittextshape</w>
       <w>predictitembuttonshape</w>
       <w>predictlist</w>
@@ -274,6 +328,7 @@
       <w>pricebye</w>
       <w>pricekala</w>
       <w>profilebuy</w>
+      <w>profilekharidar</w>
       <w>profilenamechangeprofile</w>
       <w>profileshop</w>
       <w>rankinglistbackground</w>
@@ -286,6 +341,7 @@
       <w>recyclerranking</w>
       <w>recyclersearchactivity</w>
       <w>regioncounddowntimer</w>
+      <w>regionset</w>
       <w>registeractivity</w>
       <w>registerinterface</w>
       <w>registerlinearshape</w>
@@ -314,14 +370,22 @@
       <w>searchviewbutton</w>
       <w>sectiononehomegradint</w>
       <w>sectiontableleague</w>
+      <w>sectiontodaymatch</w>
       <w>sectiontopscorelegaue</w>
       <w>sectionvideo</w>
       <w>sefaresh</w>
+      <w>selectbucode</w>
+      <w>selectbuybycode</w>
+      <w>selectbuybyusername</w>
+      <w>selectbycode</w>
+      <w>selectbyusername</w>
       <w>selectgroupkala</w>
+      <w>selectitem</w>
       <w>selectkala</w>
       <w>selectkalawithgroup</w>
       <w>selectlast</w>
       <w>selectmatch</w>
+      <w>selectnews</w>
       <w>selectpredict</w>
       <w>selectpredictbyuser</w>
       <w>selectpredicuser</w>
@@ -332,6 +396,7 @@
       <w>sendcodesms</w>
       <w>sendcodetext</w>
       <w>senddatatoview</w>
+      <w>sendgroupselected</w>
       <w>sendinsert</w>
       <w>sendinsertmatch</w>
       <w>sendinsertpredict</w>
@@ -343,15 +408,21 @@
       <w>servicesinsert</w>
       <w>setfocus</w>
       <w>setmargin</w>
+      <w>settingactivity</w>
       <w>shahrestan</w>
       <w>shapebasketrecyclerparent</w>
       <w>shapebuttondetailsactivity</w>
       <w>shapelinearbuyactivity</w>
       <w>shapelinearlayoutdescriptiondetails</w>
+      <w>shapenewsrecycleritems</w>
       <w>shapeprofilegradint</w>
       <w>shaperecyclerkalaitem</w>
       <w>shaperecyclerkalaitemblue</w>
+      <w>shaperecyclerkalaitembrown</w>
+      <w>shaperecyclerkalaitemdark</w>
       <w>shaperecyclerkalaitemgreen</w>
+      <w>shaperecyclerkalaitemorange</w>
+      <w>shaperecyclerkalaitempink</w>
       <w>shapescore</w>
       <w>shapesrank</w>
       <w>shapetabitemseleected</w>
@@ -361,11 +432,14 @@
       <w>showbasket</w>
       <w>showdialog</w>
       <w>showdialoginternet</w>
+      <w>showleagueadapter</w>
+      <w>showprogressgroup</w>
       <w>simsun</w>
       <w>sizekala</w>
       <w>sizetext</w>
       <w>smscode</w>
       <w>sorathesab</w>
+      <w>sortbuttonclicked</w>
       <w>spiner</w>
       <w>spinerbackground</w>
       <w>spineritem</w>
@@ -374,6 +448,8 @@
       <w>splitsizewithkama</w>
       <w>spltext</w>
       <w>strimage</w>
+      <w>successbuyactivity</w>
+      <w>successbuytitr</w>
       <w>sumpric</w>
       <w>sumprice</w>
       <w>swch</w>
@@ -383,6 +459,7 @@
       <w>tablayout</w>
       <w>tablelegaue</w>
       <w>teaminfo</w>
+      <w>teamlogo</w>
       <w>tedad</w>
       <w>tedadkala</w>
       <w>textadminguestgols</w>
@@ -390,6 +467,7 @@
       <w>textguesteamname</w>
       <w>texthometeamname</w>
       <w>textmessage</w>
+      <w>textnews</w>
       <w>textsize</w>
       <w>textstatus</w>
       <w>textviewspinesizeshape</w>
@@ -397,12 +475,18 @@
       <w>threadapiconnectuser</w>
       <w>titr</w>
       <w>titrkala</w>
+      <w>titrnewstext</w>
       <w>todaymatch</w>
       <w>toman</w>
+      <w>topscore</w>
+      <w>topscoreactivity</w>
       <w>topscorelegaue</w>
+      <w>topscores</w>
       <w>txtadminguestgolas</w>
       <w>txtadminhomegoal</w>
       <w>txtadminhomegols</w>
+      <w>txtdatetimenews</w>
+      <w>txtdescriptionnews</w>
       <w>txtguestteamname</w>
       <w>txthometeamname</w>
       <w>txthometeamnamelenght</w>
@@ -416,9 +500,12 @@
       <w>txtstatus</w>
       <w>txttitr</w>
       <w>txttitrkala</w>
+      <w>txttitrnews</w>
+      <w>typepay</w>
       <w>typepayment</w>
       <w>userguestteamgol</w>
       <w>userhometeamgol</w>
+      <w>userimage</w>
       <w>usernamechangeprofile</w>
       <w>usernameloginuser</w>
       <w>usernameshared</w>
@@ -434,11 +521,13 @@
       <w>viewimageshape</w>
       <w>viewimageshapegroupnotselected</w>
       <w>viewlogo</w>
+      <w>viewprofile</w>
       <w>viewrakingthree</w>
       <w>viewrank</w>
       <w>viewrankingone</w>
       <w>viewrankingtwo</w>
       <w>viewscoreranking</w>
+      <w>viewtitr</w>
       <w>zoomout</w>
     </words>
   </dictionary>

@@ -25,7 +25,7 @@ class EncodeAndDecodeImage {
         try {
             val bitmap= MediaStore.Images.Media.getBitmap(activity.contentResolver,path)
             val byteArrayOutputStream= ByteArrayOutputStream()
-            bitmap.compress(Bitmap.CompressFormat.JPEG,15,byteArrayOutputStream)
+            bitmap.compress(Bitmap.CompressFormat.JPEG,40,byteArrayOutputStream)
             val imagetobyte=byteArrayOutputStream.toByteArray()
             strimage= Base64.encodeToString(imagetobyte, Base64.DEFAULT)
 

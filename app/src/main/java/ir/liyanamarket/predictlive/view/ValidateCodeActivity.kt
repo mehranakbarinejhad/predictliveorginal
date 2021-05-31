@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
@@ -28,6 +29,8 @@ class ValidateCodeActivity : AppCompatActivity(),SendSmsCodeinterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_validate_code)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
         myMessage.activity=this
         phonenumber=intent.getStringExtra("phonenumber").toString()
         txt_entercodetext_validateactivity.text=" ما یک کد فعال سازی به شماره  $phonenumber ,ارسال کردیم!لطفا آن را وارد کنید . "
@@ -74,7 +77,7 @@ class ValidateCodeActivity : AppCompatActivity(),SendSmsCodeinterface {
             }
         }
         txt_loginclick_validateactivity.setOnClickListener {
-            finish()
+            gotoginactivity()
         }
 
         edt_numberone_validateactivity.addTextChangedListener { setfocus(edt_numberone_validateactivity,edt_numbertwo_validateactivity) }
@@ -106,5 +109,14 @@ class ValidateCodeActivity : AppCompatActivity(),SendSmsCodeinterface {
             lastedttext.requestFocus()
 
         }
+    }
+
+    override fun onBackPressed() {
+      gotoginactivity()
+    }
+
+    private fun gotoginactivity(){
+        startActivity(Intent(this,LoginActivity::class.java))
+        finish()
     }
 }

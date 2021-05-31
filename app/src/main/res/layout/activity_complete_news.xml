@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F0F0"
+    tools:context=".CompleteNewsActivity"
+    tools:ignore="RtlHardcoded">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/img_titr_completenewsactivity"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:elevation="10sp"
+            android:src="@drawable/newsimage"/>
+        <TextView
+            android:id="@+id/txt_titr_completenews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#0C0C0C"
+            android:layout_margin="2dp"
+            tools:text="@string/titrnewstext"
+            android:textSize="20sp"
+            android:fontFamily="@font/bmitrabold"
+            />
+        <TextView
+            android:id="@+id/txt_textnews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="18sp"
+            android:fontFamily="@font/bmitra"
+            android:textColor="#272727"
+           android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+
+</ScrollView>

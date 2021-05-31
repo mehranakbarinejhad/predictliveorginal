@@ -1,7 +1,7 @@
 package ir.liyanamarket.predictlive.dataclass
 
 data class GroupKala(
-    var idgroup:Int,
+    var id:String,
     var namegroup:String,
     var imagegroup:String
 )

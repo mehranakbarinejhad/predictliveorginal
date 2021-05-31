@@ -1,5 +1,6 @@
 package ir.liyanamarket.predictlive.fragment
 
+import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -41,10 +42,11 @@ private val presenterApiConnectUser: PresenterApiConnectUser by inject()
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        presenterApiConnectUser.getusers("")
-        presenterApiConnectUser.sendUsersInterface=this
+      presenterApiConnectUser.sendUsersInterface=this
       fragmentProgress.show(activity.supportFragmentManager,"progressbar")
+        presenterApiConnectUser.getusers("")
+
+
 
 
     }
@@ -81,12 +83,30 @@ private val presenterApiConnectUser: PresenterApiConnectUser by inject()
     }
 
     override fun onerror(t: Throwable) {
-        Toast.makeText(thiscontext,"Error",Toast.LENGTH_LONG).show()
+        fragmentProgress.dismiss()
+        showInternetConnectDialog()
+       // Toast.makeText(thiscontext,"Error",Toast.LENGTH_LONG).show()
 
     }
 
 
 
+
+
+    private fun showInternetConnectDialog(){
+        val builder= AlertDialog.Builder(activity)
+        builder.setTitle("خطا در اتصال به اینترنت")
+        builder.setMessage("لطفا وضعیت اینترنت را بررسی نمایید")
+            .setCancelable(false)
+        builder.setPositiveButton("تلاش دوباره"){_,_ ->
+            fragmentProgress.show(activity.supportFragmentManager,"progressbar")
+            presenterApiConnectUser.getusers("")
+        }
+        builder.setNegativeButton("خروج از برنامه"){_,_->
+            activity.finishAffinity()
+        }
+        builder.show()
+    }
 
 
 

@@ -1,4 +1,4 @@
-package ir.liyanamarket.predictlive
+package ir.liyanamarket.predictlive.view
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,10 +7,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.google.android.material.tabs.TabLayout
 import com.squareup.picasso.Picasso
+import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendinsertBasket
 import ir.liyanamarket.predictlive.adapter.SpinerSizeAdapter
 import ir.liyanamarket.predictlive.dataclass.InsertBasketResult
@@ -27,7 +29,10 @@ lateinit var username:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details_kala)
-        presenterApiConnectInsertBasket.sendinsertBasket=this
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
+
+                presenterApiConnectInsertBasket.sendinsertBasket=this
          username=intent.getStringExtra("username").toString()
         val codekala=intent.getStringExtra("codekala").toString()
         try {
@@ -131,7 +136,7 @@ btn_addtobasket.setOnClickListener {
         if(list[0].result=="true")
         {
             Toast.makeText(this,"به لیست سبد خرید اضافه شد",Toast.LENGTH_LONG).show()
-           val intent=Intent(applicationContext,BasketActivity::class.java)
+           val intent=Intent(applicationContext, BasketActivity::class.java)
             intent.putExtra("username",username)
             startActivity(intent)
                 finish()

@@ -1,9 +1,11 @@
-package ir.liyanamarket.predictlive
+package ir.liyanamarket.predictlive.view
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import ir.liyanamarket.predictlive.R
 import ir.liyanamarket.predictlive.`interface`.SendLastCodeSefaresh
 import ir.liyanamarket.predictlive.`interface`.SendShowBasket
 import ir.liyanamarket.predictlive.`interface`.SendinsertBuy
@@ -33,11 +35,15 @@ class BuyActivity : AppCompatActivity(), SendShowBasket, SendLastCodeSefaresh, S
     private var lastcodesefaresh = 0
     lateinit var username: String
     lateinit var list: List<ShowBasket>
+
     //endregion
     //region oncreate method
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy)
+        window.decorView.layoutDirection= View.LAYOUT_DIRECTION_LTR
+
         //region Get Username From Intent And Set To Public Variable Username
         username = intent.getStringExtra("username").toString()
         //endregion
@@ -64,18 +70,25 @@ class BuyActivity : AppCompatActivity(), SendShowBasket, SendLastCodeSefaresh, S
                     edt_completeaddress
                 )
             ) {
-                presenterApiConnectinsertBuy.insertbuy(
-                    username,
-                    lastcodesefaresh.toString(),
-                    list[0].codekala,
-                    list[0].kala[0].name,
-                    list[0].kala[0].price,
-                    list[0].tedadkala,
-                    list[0].sizekala,
-                    edt_namekharidar.text.toString(),
-                    edt_phonenumber_buyactivity.text.toString(),
-                    edt_ostan.text.toString() + " " + edt_shahrestan.text.toString() + " " + edt_completeaddress.text.toString()
-                )
+                 var countlist=list.size-1
+                while(countlist>=0)
+                {
+                    presenterApiConnectinsertBuy.insertbuy(
+                        username,
+                        lastcodesefaresh.toString(),
+                        list[countlist].codekala,
+                        list[countlist].kala[0].name,
+                        list[countlist].kala[0].price,
+                        list[countlist].tedadkala,
+                        list[countlist].sizekala,
+                        edt_namekharidar.text.toString(),
+                        edt_phonenumber_buyactivity.text.toString(),
+                        edt_ostan.text.toString() + " " + edt_shahrestan.text.toString() + " " + edt_completeaddress.text.toString()
+                    )
+                    countlist--
+
+                }
+
             }
         }
 
@@ -101,9 +114,17 @@ class BuyActivity : AppCompatActivity(), SendShowBasket, SendLastCodeSefaresh, S
     }
     override fun onsuucessinsertbuy(list: List<Buy>) {
         try {
-
-            Toast.makeText(this, list.toString(), Toast.LENGTH_LONG).show()
-
+           // if(list.size==this.list.size) {
+               val listbuy=list.size
+            val listbasket=this.list.size
+            if(listbuy==listbasket){
+                this.list= emptyList()
+                val intent= Intent(applicationContext, BuySuccessActivity::class.java)
+                intent.putExtra("username",username)
+                intent.putExtra("codesefaresh",lastcodesefaresh)
+                startActivity(intent)
+                finish()
+            }
 
         } catch (ex: Exception) {
         }

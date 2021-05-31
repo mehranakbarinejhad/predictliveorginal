@@ -20,11 +20,11 @@
 
      <com.google.android.material.bottomappbar.BottomAppBar
          android:id="@+id/appbar"
-        app:elevation="5dp"
+        app:elevation="4dp"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
+        android:layout_height="45dp"
         android:layout_marginStart="-16sp"
-        app:backgroundTint="#8294B1"
+        app:backgroundTint="#2A446C"
         app:fabAlignmentMode="center"
         app:fabAnimationMode="slide"
         android:layout_gravity="bottom"
@@ -32,14 +32,12 @@
          app:fabCradleMargin="4dp"
          app:fabCradleVerticalOffset="2dp"
         >
-
-
-
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomnavigationview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:itemIconTint="@drawable/bottomnavigationhomeactivity"
+            app:itemTextColor="@color/white"
             android:background="@android:color/transparent"
                      app:menu="@menu/bottom_menu"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
@@ -53,7 +51,7 @@
         android:contentDescription="@string/todo"
        android:elevation="6dp"
         app:borderWidth="0dp"
-        android:backgroundTint="#C90D53"
+        android:backgroundTint="#BA0643"
        >
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>

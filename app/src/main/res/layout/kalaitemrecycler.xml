@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="172dp"
-    android:layout_height="270dp"
+    android:layout_width="160dp"
+    android:layout_height="230dp"
     android:layout_gravity="center"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp"
+   android:layout_margin="8dp"
     android:elevation="20dp"
-    android:background="@drawable/shaperecyclerkalaitemgreen"
+    android:background="@drawable/shaperecyclerkalaitemred"
     android:id="@+id/recyclerkalaparent">
 
     <TextView
@@ -18,7 +17,7 @@
         android:gravity="center"
         tools:text="@string/kafsh_juma"
         android:textColor="#FFF"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/txt_namekala"
@@ -31,7 +30,7 @@
         android:fontFamily="@font/andalus"
         tools:text="@string/juma_n51"
         android:textColor="#FFF"
-        android:textSize="17sp" />
+        android:textSize="15sp" />
 
     <ImageView
         android:id="@+id/img_flagkala"
@@ -47,8 +46,8 @@
 
     <ImageView
         android:id="@+id/img_kala"
-        android:layout_width="145dp"
-        android:layout_height="145dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_below="@id/txt_namekala"
         android:layout_centerHorizontal="true"
      android:layout_margin="5dp"
@@ -84,17 +83,6 @@
         android:textSize="18sp" />
 
 
-
-    <ImageView
-        android:id="@+id/img_icon_next"
-        android:layout_width="20dp"
-        android:layout_height="20sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="5dp"
-        android:contentDescription="@string/todo"
-        android:scaleType="fitXY"
-        android:src="@drawable/backicon" />
 
 
 </RelativeLayout>
